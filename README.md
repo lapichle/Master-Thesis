@@ -8,17 +8,17 @@
 
 ## 📖 **Overview**
 This repository contains all the datasets, code, and analysis scripts associated with my master's thesis:  
-> *"Battling Idiosyncratic Uncertainty: The Conflict between Artificial Intelligence and Unpredictable Factors."*
+> *"Battling Idiosyncratic Uncertainty: The Conflict between Artificial Intelligence and Unpredictable Factors"*
 
 The study investigates how **Persona Agent Large Language Models (LLMs)** can reduce idiosyncratic biases in research by simulating the decision-making processes of diverse researchers. Inspired by **Breznau et al. (2022)**, this research explores how **interpretive flexibility** affects scientific reproducibility and how structured AI personas can enhance transparency in data analysis.
 
 ---
 
 ## 🏛 **Research Goals**
-✅ Develop **persona agents** to mimic diverse researcher profiles.  
-✅ Examine **interpretive variability** in statistical modeling decisions.  
-✅ Enhance **replicability** by structuring LLMs for research workflows.  
-✅ Analyze how AI-based decision frameworks compare to **human analysts**.
+✅ Develop **persona agents** to mimic diverse researcher profiles
+✅ Examine **interpretive variability** in statistical modeling decisions 
+✅ Enhance **replicability** by structuring LLMs for research workflows
+✅ Analyze how AI-based decision frameworks compare to **human analysts**
 
 ---
 
