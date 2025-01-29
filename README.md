@@ -56,3 +56,12 @@ Master-Thesis/
 │   ├── README.md        # Notes on statistical findings
 │
 └── README.md            # Main repository documentation
+
+## 📊 Key Findings
+### 🎭 Persona Agent Profiles
+This study developed five persona-based AI agents to **simulate researcher diversity** in model selection:
+1. **Statistical Purist** → Prefers standard regression models
+2. **Social Scientist** → Chooses hierarchical/mixed models
+3. **Innovative Modeler** → Experiments with Bayesian methods & ML models
+4. **Hypothesis-Driven Analyst** → Uses confirmatory models with high robustness
+5. **Empirical Skeptic** → Favors conservative models with stricter constraints
