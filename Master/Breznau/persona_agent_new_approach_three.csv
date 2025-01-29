@@ -1,0 +1,31 @@
+persona,dependent_variable,model_used,parameters,complexity,interpretation
+Statistical Purist,incdiff_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,jobs_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,oldage_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,unemp_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,housing_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,health_c,linear_regression,{},simple,The results are reliable with simple complexity.
+Social Scientist,incdiff_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,jobs_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,oldage_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,unemp_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,housing_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,health_c,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Innovative Modeler,incdiff_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,jobs_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,oldage_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,unemp_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,housing_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,health_c,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Hypothesis-Driven Analyst,incdiff_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,jobs_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,oldage_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,unemp_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,housing_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,health_c,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Empirical Skeptic,incdiff_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,jobs_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,oldage_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,unemp_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,housing_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,health_c,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.

@@ -1,0 +1,16 @@
+persona,year,model_used,parameters,complexity,interpretation
+Statistical Purist,1996,OLS,{'beta': 0.0003499725026576487},simple,The results are reliable with simple complexity.
+Statistical Purist,2006,OLS,{'beta': 0.001298945679619236},simple,The results are reliable with simple complexity.
+Statistical Purist,2016,OLS,{'beta': -0.016102950190573506},simple,The results are reliable with simple complexity.
+Social Scientist,1996,OLS,{'beta': -0.00840856830515696},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,2006,OLS,{'beta': 0.001298945679619236},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,2016,OLS,{'beta': -7.243916526148893e-05},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Innovative Modeler,1996,OLS,{'beta': -0.0011215729721751199},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,2006,OLS,{'beta': 0.002781630906391583},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,2016,OLS,{'beta': 0.0038957259939355598},complex,"The complexity enhances insights, but caution is needed for generalization."
+Hypothesis-Driven Analyst,1996,OLS,{'beta': -0.0011215729721751199},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,2006,OLS,{'beta': -0.018006436309850063},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,2016,OLS,{'beta': -7.243916526148893e-05},moderate,Findings strongly support the hypothesis-driven framework.
+Empirical Skeptic,1996,OLS,{'beta': 0.0003499725026576487},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,2006,OLS,{'beta': -0.010300466477818954},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,2016,OLS,{'beta': -0.016102950190573506},low,Results should be interpreted conservatively due to low complexity preference.

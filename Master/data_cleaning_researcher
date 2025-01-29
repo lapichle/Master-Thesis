@@ -1,0 +1,41 @@
+import pandas as pd 
+import numpy as np 
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import StandardScaler
+from scipy import stats
+
+cleaned_file_path = "/Users/laurapichler/Desktop/Repository/Master-Thesis/Data/research_data.csv"
+data = pd.read_csv(cleaned_file_path)
+
+# Step 1: Handle Missing Values
+# Drop columns with more than 50% missing values
+data = data.dropna(thresh=data.shape[0] * 0.5, axis=1)
+
+# Impute remaining missing values
+for column in data.columns:
+    if data[column].dtype == 'object':  # Categorical data
+        data[column].fillna(data[column].mode()[0], inplace=True)
+    else:  # Numerical data
+        data[column].fillna(data[column].median(), inplace=True)
+
+# Step 2: Convert Categorical Columns to Numerical
+categorical_columns = ['backgr_degree', 'belief_H1_1', 'v_110']  # Add any other categorical columns
+for col in categorical_columns:
+    data[col] = LabelEncoder().fit_transform(data[col].astype(str))
+
+# Step 3: Standardize Numerical Data
+numerical_columns = ['v_33', 'v_98', 'v_99', 'v_100']  # Replace with relevant numerical columns
+scaler = StandardScaler()
+data[numerical_columns] = scaler.fit_transform(data[numerical_columns])
+
+# Step 4: Remove Outliers
+# Using Z-score to filter out rows with outliers in numerical columns
+data = data[(np.abs(stats.zscore(data[numerical_columns])) < 3).all(axis=1)]
+
+# Store now the cleaned data
+data.to_csv('cleaned_research_data.csv', index=False)
+
+
+ 
+
+

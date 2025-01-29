@@ -1,0 +1,51 @@
+persona,iteration,model_used,parameters,complexity,interpretation
+Statistical Purist,0,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,1,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,2,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,3,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,4,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,5,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,6,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,7,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,8,linear_regression,{},simple,The results are reliable with simple complexity.
+Statistical Purist,9,linear_regression,{},simple,The results are reliable with simple complexity.
+Social Scientist,0,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,1,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,2,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,3,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,4,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,5,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,6,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,7,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,8,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Social Scientist,9,hierarchical_linear_model,{},moderate,"Results should consider social factors, as the model shows moderate alignment."
+Innovative Modeler,0,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,1,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,2,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,3,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,4,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,5,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,6,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,7,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,8,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Innovative Modeler,9,bayesian_regression,{},complex,"The complexity enhances insights, but caution is needed for generalization."
+Hypothesis-Driven Analyst,0,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,1,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,2,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,3,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,4,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,5,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,6,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,7,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,8,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Hypothesis-Driven Analyst,9,confirmatory_factor_analysis,{},moderate,Findings strongly support the hypothesis-driven framework.
+Empirical Skeptic,0,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,1,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,2,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,3,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,4,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,5,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,6,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,7,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,8,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.
+Empirical Skeptic,9,linear_regression,{},low,Results should be interpreted conservatively due to low complexity preference.

@@ -1,0 +1,37 @@
+# Factor Analysis with the data of the researchers 
+
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import FactorAnalysis
+
+# Loading the CSV file
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Data/cleaned_research_data.csv' 
+data = pd.read_csv(file_path)
+
+# Step 1: Selecting relevant columns for factor analysis based on selected attributes
+selected_columns = [
+    'backgr_degree', 'v_18', 'backgr_exp_famil_mlm', 'backgr_exp_teach_stat',  # Experience and Expertise
+    'belief_H1_1', 'belief_H1_2', 'belief_H1_3',  # Personal Belief about Hypothesis
+    'belief_certainty_1', 'belief_certainty_2', 'belief_certainty_3',  # Certainty in Belief about Immigration Hypothesis
+    'v_33', 'v_98', 'v_99', 'v_100',  # Commitment and Constraints
+    'v_41', 'v_88', 'v_90', 'v_94',  # Personal Motivation and Preferences
+    'v_110'  # Demographics
+]
+data_selected = data[selected_columns]
+
+# Step 2: Standardizing the data
+scaler = StandardScaler()
+data_scaled = scaler.fit_transform(data_selected)
+
+# Step 3: Applying Factor Analysis
+fa = FactorAnalysis(n_components=10, random_state=42)  # Adjust the number of components as needed
+factors = fa.fit_transform(data_scaled)
+
+# Step 4: Interpreting the factor loadings
+factor_loadings_ten= pd.DataFrame(fa.components_, columns=selected_columns)
+print("Factor Loadings:\n", factor_loadings_ten)
+
+# Save the factor loadings for reference
+factor_loadings_ten.to_csv('factor_loadings_ten.csv', index=False)
+
+#The interpretation of the attributes is found in the Thesis 

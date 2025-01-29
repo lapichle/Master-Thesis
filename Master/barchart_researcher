@@ -1,0 +1,49 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+categories = [
+    "Statistical Purist",
+    "Social Scientist",
+    "Hypothesis-Driven Analyst",
+    "Innovative Modeler",
+    "Empirical Skeptic",
+    "Other"
+]
+values = [2, 32, 21, 12, 1, 138]
+
+
+colors = ["#e27c7c", "#a86464", "#6d4b4b", "#503f3f", "#333333", "#3c4e4b"]
+
+
+fig, ax = plt.subplots(figsize=(8, 6))
+
+
+bars = ax.bar(categories, values, color=colors, edgecolor="black", linewidth=1.2)
+
+
+ax.yaxis.grid(True, linestyle="--", alpha=0.7)
+
+
+ax.set_title("Persona Distribution in Researcher Dataset", fontsize=14, fontweight="bold")
+ax.set_ylabel("Number of Researchers", fontsize=12)
+ax.set_xlabel("Persona Categories", fontsize=14)
+ax.tick_params(axis="x", labelrotation=30, labelsize=10)
+ax.tick_params(axis="y", labelsize=10)
+
+
+for bar in bars:
+    height = bar.get_height()
+    ax.annotate(f'{height}',
+                xy=(bar.get_x() + bar.get_width() / 2, height),
+                xytext=(0, 5),  
+                textcoords="offset points",
+                ha="center", va="bottom", fontsize=10)
+
+
+plt.tight_layout()
+
+
+bar_chart_path = "/Users/laurapichler/Desktop/Repository/Plots/Persona_Distribution_Bar_Chart.png"
+plt.savefig(bar_chart_path, dpi=300)
+plt.show()

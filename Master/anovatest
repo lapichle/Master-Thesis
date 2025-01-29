@@ -1,0 +1,395 @@
+'''
+Replicating the Study of Breznau using the Persona Agents 
+'''
+import pandas as pd
+import statsmodels.formula.api as smf
+import random
+import pandas as pd 
+import numpy as np 
+import random
+import json 
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+
+# Loading the CSV file
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Data/cleaned_research_data.csv' 
+data = pd.read_csv(file_path)
+
+def assign_persona(row):
+
+    # Retrieving values for relevant columns
+    degree = row['backgr_degree']
+    teaching_exp = row['backgr_exp_teach_stat']
+    belief_certainty = row[['belief_certainty_1', 'belief_certainty_2', 'belief_certainty_3']].mean()
+    interest = row.get('v_88', 0)  # Interest in project, if available
+    time_constraint = row.get('v_98', 0)  # Time constraint, if available
+
+    # Refining conditions for each persona type
+    if degree == 7 or (teaching_exp >= 8 and belief_certainty <= 3):
+        return "Innovative Modeler"  # Highly method-focused or experimental preference
+
+    elif degree == 2 and teaching_exp >= 7 and belief_certainty >= 5:
+        return "Statistical Purist"  # Strong statistical expertise and confidence
+
+    elif degree in [3, 4] and teaching_exp <= 4 and 2 <= belief_certainty <= 4:
+        return "Social Scientist"  # Sociological/political focus with moderate certainty
+
+    elif degree in [2, 3] and belief_certainty >= 4 and teaching_exp >= 5:
+        return "Hypothesis-Driven Analyst"  # High belief certainty, likely hypothesis-driven
+
+    elif degree in [4] and belief_certainty <= 3 and (time_constraint >= 2 or teaching_exp <= 5):
+        return "Empirical Skeptic"  # Low certainty, cautious approach with potential constraints
+
+    else:
+        return "Other"  # Researchers who don't fit neatly into any specific persona category
+
+# Applying the refined persona assignment function to each row in the DataFrame
+data['persona'] = data.apply(assign_persona, axis=1)
+
+# Displaying the count of each persona type to verify the refined distribution
+print(data['persona'].value_counts())
+
+
+persona_model_criteria = {
+    "Statistical Purist": {
+        "model_types": ["linear_regression", "logistic_regression",  "stock_model_ols", "flow_model_ols"],
+        "complexity_preference": "simple",
+        "data_handling": {
+            "handle_missing": "mean_imputation",
+            "transformations": ["log"],
+            "outlier_handling": "remove_outliers"  
+        }
+    },
+    "Social Scientist": {
+        "model_types": ["hierarchical_linear_model", "generalized_linear_model"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "multiple_imputation",
+            "transformations": ["none"],
+            "outlier_handling": "cap_outliers"
+        }
+    },
+    "Innovative Modeler": {
+        "model_types": ["bayesian_regression", "machine_learning", "complex_bayesian_model", "ml_model"],
+        "complexity_preference": "complex",
+        "data_handling": {
+            "handle_missing": "predictive_imputation",
+            "transformations": ["scaling", "PCA"],
+            "outlier_handling": "retain_outliers"
+        }
+    },
+    "Hypothesis-Driven Analyst": {
+        "model_types": ["confirmatory_factor_analysis", "logistic_regression", "logistic_model_flow", "logistic_model_stock"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["standardization"],
+            "outlier_handling": "remove_outliers"
+        }
+    },
+    "Empirical Skeptic": {
+        "model_types": ["linear_regression", "basic_multilevel_model", "stock_model_simple"],
+        "complexity_preference": "low",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["none"],
+            "outlier_handling": "cap_outliers"
+        }
+    }
+}
+import pandas as pd 
+
+# Load the dataset
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/processed_dataset2.csv'  
+dataset = pd.read_csv(file_path)
+
+# Define dependent variables
+dvs_c = ["incdiff_c", "jobs_c", "oldage_c", "unemp_c", "housing_c", "health_c"]
+
+# Define independent variables
+ivs = ["migstock_un", "netmigpct", "wdi_unempilo", "socx_oecd", "gdp_oecd"]
+
+# Define control variables
+controls = ["female", "age", "age_sq", "education", "income"]
+
+
+
+# Defining a function that selects a model based on persona guidelines and input dataset characteristics
+def select_model_based_on_persona(persona, dataset):
+    """
+    Selects a model and data handling strategy based on the specified persona's preferences
+    Parameters:
+    - persona (str): The persona type for which to select the model
+    - dataset (DataFrame): The dataset to be analyzed (used for deciding based on data characteristics)
+    Returns:
+    - dict: Contains selected model, complexity preference, and data handling steps
+
+    """
+    # Retrieving the specific guidelines for the given persona
+    criteria = persona_model_criteria.get(persona, {})
+    
+    # Determining model type based on persona and basic dataset properties (e.g., sample size)
+    model_type = criteria.get("model_types", ["linear_regression"])[0]  
+    
+    # Applying complexity preference and data handling guidelines
+    complexity = criteria.get("complexity_preference", "simple")
+    data_handling = criteria.get("data_handling", {"handle_missing": "none", "transformations": ["none"]})
+    
+    # Returning the selected model setup
+    return {
+        "persona": persona,
+        "selected_model": model_type,
+        "complexity": complexity,
+        "data_handling": data_handling
+    }
+
+
+# 2 Step, Developing LLM Persona Agents
+
+class PersonaAgent:
+    def __init__(self, persona_type):
+        """
+        Initializes the PersonaAgent with a specific persona type and sets guidelines.
+        """
+        self.persona_type = persona_type
+        self.guidelines = persona_model_criteria.get(persona_type, {})
+    
+    def select_model(self, dataset):
+        """
+        Uses the persona's preferences to select a model, simulating an LLM-driven choice.
+        """
+        model_info = select_model_based_on_persona(self.persona_type, dataset)
+        print(f"[{self.persona_type}] Selected model: {model_info['selected_model']}")
+        # Simulate an LLM reasoning process for model selection
+        model_choice_reason = f"As a {self.persona_type}, I chose {model_info['selected_model']} because it aligns with my preference for {model_info['complexity']} complexity."
+        print(f"[{self.persona_type} Reasoning] {model_choice_reason}")
+        return model_info
+    
+    def preprocess_data(self, dataset):
+        """
+        Applies data handling based on persona-specific guidelines, including outlier handling and scaling.
+        """
+        # Ensure dataset is a DataFrame
+        if not isinstance(dataset, pd.DataFrame):
+            raise TypeError(f"Expected 'dataset' to be a DataFrame, but got {type(dataset).__name__} instead.")
+
+        data_handling = self.guidelines.get("data_handling", {})
+        
+        # Select numeric columns to handle only numeric data
+        numeric_cols = dataset.select_dtypes(include=['number']).columns
+
+        # Handle missing values only in numeric columns to avoid nuisance columns warning
+        if data_handling["handle_missing"] == "mean_imputation":
+            dataset[numeric_cols] = dataset[numeric_cols].fillna(dataset[numeric_cols].mean())
+        elif data_handling["handle_missing"] == "listwise_deletion":
+            dataset.dropna(inplace=True)
+        elif data_handling["handle_missing"] == "predictive_imputation":
+            # Placeholder: Apply predictive imputation or fill missing with a general approach
+            dataset[numeric_cols] = dataset[numeric_cols].fillna(dataset[numeric_cols].mean())  # Replace with actual predictive imputation if needed
+
+        # Ensure no NaN or Inf values remain for scaling
+        dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
+        dataset.dropna(inplace=True)  # Alternatively, fill with mean or median if appropriate
+
+        # Transformations like scaling or PCA
+        if len(dataset) > 0:  # Check if dataset is non-empty
+            if "scaling" in data_handling["transformations"]:
+                scaler = StandardScaler()
+                try:
+                    dataset[numeric_cols] = scaler.fit_transform(dataset[numeric_cols])
+                except ValueError as e:
+                    print(f"[{self.persona_type}] Error during scaling: {e}")
+
+            # Optional: PCA transformation
+            if "PCA" in data_handling["transformations"]:
+                pca = PCA(n_components=min(len(numeric_cols), dataset.shape[0]))
+                try:
+                    dataset[numeric_cols] = pca.fit_transform(dataset[numeric_cols])
+                except ValueError as e:
+                    print(f"[{self.persona_type}] Error during PCA transformation: {e}")
+
+        print(f"[{self.persona_type}] Preprocessed data with: {data_handling}")
+        return dataset
+
+#Replacing the placeholder analyze_data logic in the PersonaAgent class with a regression-based approach
+
+from statsmodels.api import OLS
+from statsmodels.tools.tools import add_constant
+
+class PersonaAgent:
+    def __init__(self, persona_type):
+        self.persona_type = persona_type
+        self.guidelines = persona_model_criteria.get(persona_type, {})
+
+    def analyze_data(self, dataset):
+        """
+        Conducts analysis using the persona's model preferences.
+        """
+        print(f"\n[{self.persona_type}] Running analysis on dataset.")
+        # Use a placeholder dependent and independent variable
+        try:
+            # Use dependent and independent variables dynamically
+            y = dataset[random.choice(dvs_c)]  # Randomly select a dependent variable for variability
+            X = dataset[ivs]
+            X = add_constant(X)
+
+            # Fit OLS model
+            model = OLS(y, X).fit()
+            beta = model.params[1]  # Example: Use the first coefficient as beta
+
+            result = {
+                "model": "OLS",
+                "complexity": self.guidelines.get("complexity_preference", "unknown"),
+                "AIC": model.aic,
+                "BIC": model.bic,
+                "parameter_estimates": {"beta": beta}
+            }
+
+        except Exception as e:
+            print(f"[{self.persona_type}] Error during analysis: {e}")
+            result = {
+                "model": "OLS",
+                "complexity": self.guidelines.get("complexity_preference", "unknown"),
+                "parameter_estimates": {"beta": np.nan}
+            }
+
+        return result
+
+
+    def interpret_results(self, results):
+        """
+        Provides persona-specific interpretation of results.
+        """
+        interpretation = ""
+        if self.persona_type == "Statistical Purist":
+            interpretation = f"The results are reliable with {results['complexity']} complexity."
+        elif self.persona_type == "Social Scientist":
+            interpretation = f"Results should consider social factors, as the model shows moderate alignment."
+        elif self.persona_type == "Innovative Modeler":
+            interpretation = f"The complexity enhances insights, but caution is needed for generalization."
+        elif self.persona_type == "Hypothesis-Driven Analyst":
+            interpretation = f"Findings strongly support the hypothesis-driven framework."
+        elif self.persona_type == "Empirical Skeptic":
+            interpretation = f"Results should be interpreted conservatively due to low complexity preference."
+
+        print(f"[{self.persona_type} Interpretation] {interpretation}")
+        return interpretation
+
+
+# Create persona agents
+persona_types = ["Statistical Purist", "Social Scientist", "Innovative Modeler", 
+                 "Hypothesis-Driven Analyst", "Empirical Skeptic"]
+agents = [PersonaAgent(persona) for persona in persona_types]
+results = {}
+
+#1. Divide the Dataset into Subsets
+#Split the dataset into subsets (e.g., by years, regions, or other grouping variables) and analyze each subset separately for each persona
+
+all_results = []
+
+unique_years = dataset['year'].unique()
+unique_countries = dataset['iso_country'].unique()  
+
+for agent in agents:
+    for year in unique_years:
+        for country in unique_countries:
+            subset = dataset[(dataset['year'] == year) & (dataset['iso_country'] == country)]
+        subset = dataset[dataset['year'] == year]
+        if not subset.empty:
+            analysis_results = agent.analyze_data(subset)
+            interpretation = agent.interpret_results(analysis_results)
+            all_results.append({
+                "persona": agent.persona_type,
+                "year": year,
+                "model_used": analysis_results.get("model", "missing"),
+                "parameters": analysis_results.get("parameter_estimates", {}),
+                "complexity": analysis_results.get("complexity", "unknown"),
+                "interpretation": interpretation
+            })
+
+# Check subset sizes per year
+for year in unique_years:
+    subset = dataset[dataset['year'] == year]
+    print(f"Year: {year}, Subset size: {len(subset)}")
+
+results_df = pd.DataFrame(all_results)
+
+print(results_df.groupby(["persona", "year"]).size())
+print(results_df)
+
+# Now I have 3 observations of each persona of each year in my dataset 
+results_df.to_csv("/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/persona_agent_new_approach.csv", index=False)
+print("Results saved successfully.")
+
+# 2. Check sufficient observations for ANOVA
+results_df["beta"] = results_df["parameters"].apply(lambda x: x.get("beta", np.nan))
+
+# Group the beta values by persona
+grouped_estimates = results_df.groupby("persona")["beta"].apply(lambda x: x.dropna().tolist())
+
+# Ensure only groups with more than one observation are included
+filtered_groups = [group for group in grouped_estimates if len(group) > 1]
+
+if len(filtered_groups) > 1:
+    from scipy.stats import f_oneway
+    # Perform ANOVA on the filtered numeric groups
+    f_stat, p_value = f_oneway(*filtered_groups)
+    print(f"ANOVA results: F-statistic={f_stat}, p-value={p_value}")
+else:
+    print("Not enough valid data for ANOVA: At least two groups with more than one observation are required.")
+
+grouped_estimates = results_df.groupby("persona")["beta"].apply(lambda x: x.dropna().tolist())
+
+for persona, group in grouped_estimates.items():
+    print(f"Persona: {persona}, Beta Values: {group}, Variance: {np.var(group)}")
+
+#Results: ANOVA results: F-statistic=3.634340097930569, p-value=0.04454584075997916
+
+'''
+Visualization
+'''
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Creating a DataFrame for the beta values and personas
+data = {
+    "persona": [
+        "Empirical Skeptic", "Empirical Skeptic", "Empirical Skeptic",
+        "Hypothesis-Driven Analyst", "Hypothesis-Driven Analyst", "Hypothesis-Driven Analyst",
+        "Innovative Modeler", "Innovative Modeler", "Innovative Modeler",
+        "Social Scientist", "Social Scientist", "Social Scientist",
+        "Statistical Purist", "Statistical Purist", "Statistical Purist"
+    ],
+    "beta": [
+        -0.00908999337251559, -0.01034445601303765, 0.0025635102512074743,
+        -0.0011215729721751199, 0.001298945679619236, 0.0038313794537184528,
+        -0.00840856830515696, -0.018006436309850063, -0.016102950190573506,
+        0.0003499725026576487, -0.018006436309850063, -0.016102950190573506,
+        -0.0013718405403909976, 0.00018585461689393969, -7.243916526148893e-05
+    ]
+}
+
+results_df = pd.DataFrame(data)
+
+# Plot 1: Boxplot of beta distributions by persona
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=results_df, x='persona', y='beta', palette="Set2")
+plt.title('Distribution of Beta Values by Persona')
+plt.xlabel('Persona')
+plt.ylabel('Beta Values')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Plot 2: Violin plot of beta distributions by persona
+plt.figure(figsize=(10, 6))
+sns.violinplot(data=results_df, x='persona', y='beta', palette="Set3", inner="quartile")
+plt.title('Violin Plot of Beta Distributions by Persona')
+plt.xlabel('Persona')
+plt.ylabel('Beta Values')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()

@@ -1,0 +1,2701 @@
+persona,dependent_variable,independent_variable,aic,bic,random_effects_var,summary
+Statistical Purist,incdiff_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8475     
+Min. group size:   1898    Log-Likelihood:     -95290.8166
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.891    0.057 50.632 0.000  2.779  3.003
+C(year)[T.2006]  0.108    0.009 11.940 0.000  0.090  0.125
+C(year)[T.2016]  0.196    0.011 18.172 0.000  0.175  0.217
+migstock_un     -0.073    0.010 -7.210 0.000 -0.093 -0.053
+Group Var        0.061    0.022                           
+==========================================================
+"
+Statistical Purist,incdiff_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8474     
+Min. group size:   1898    Log-Likelihood:     -95288.7497
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.904    0.060 48.657 0.000  2.787  3.021
+C(year)[T.2006]  0.100    0.009 11.522 0.000  0.083  0.117
+C(year)[T.2016]  0.160    0.009 17.655 0.000  0.143  0.178
+netmigpct       -0.044    0.006 -7.554 0.000 -0.056 -0.033
+Group Var        0.067    0.024                           
+==========================================================
+"
+Statistical Purist,incdiff_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+=========================================================
+Model:            MixedLM Dependent Variable: incdiff_c  
+No. Observations: 71266   Method:             REML       
+No. Groups:       19      Scale:              0.8481     
+Min. group size:  1898    Log-Likelihood:     -95317.0981
+Max. group size:  7597    Converged:          Yes        
+Mean group size:  3750.8                                 
+---------------------------------------------------------
+                Coef. Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------
+Intercept       2.916    0.063 46.458 0.000  2.793  3.039
+C(year)[T.2006] 0.085    0.010  8.566 0.000  0.066  0.105
+C(year)[T.2016] 0.154    0.010 15.967 0.000  0.135  0.173
+wdi_unempilo    0.000    0.007  0.066 0.947 -0.013  0.014
+Group Var       0.074    0.027                           
+=========================================================
+"
+Statistical Purist,incdiff_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.7381
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.916    0.063 46.408 0.000  2.792  3.039
+C(year)[T.2006]  0.085    0.009  9.640 0.000  0.068  0.102
+C(year)[T.2016]  0.154    0.011 13.989 0.000  0.133  0.176
+socx_oecd       -0.001    0.010 -0.085 0.932 -0.020  0.018
+Group Var        0.074    0.027                           
+==========================================================
+"
+Statistical Purist,incdiff_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.0883
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.905    0.063 46.169 0.000  2.782  3.028
+C(year)[T.2006]  0.096    0.016  6.009 0.000  0.065  0.128
+C(year)[T.2016]  0.173    0.025  6.947 0.000  0.124  0.222
+gdp_oecd        -0.011    0.013 -0.841 0.401 -0.037  0.015
+Group Var        0.071    0.026                           
+==========================================================
+"
+Statistical Purist,jobs_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1971     
+Min. group size:    1898    Log-Likelihood:     -43302.3828
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.062    0.013   4.907 0.000  0.037  0.087
+C(year)[T.2006] -0.069    0.004 -15.688 0.000 -0.078 -0.060
+C(year)[T.2016] -0.116    0.005 -21.702 0.000 -0.127 -0.106
+migstock_un      0.052    0.005   9.924 0.000  0.042  0.063
+Group Var        0.003    0.002                            
+===========================================================
+"
+Statistical Purist,jobs_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43347.0851
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.042    0.003  12.047 0.000  0.035  0.048
+C(year)[T.2006] -0.050    0.004 -11.735 0.000 -0.058 -0.042
+C(year)[T.2016] -0.082    0.005 -17.753 0.000 -0.091 -0.073
+netmigpct       -0.000    0.002  -0.026 0.979 -0.004  0.004
+Group Var        0.000    0.000                            
+===========================================================
+"
+Statistical Purist,jobs_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1973     
+Min. group size:    1898    Log-Likelihood:     -43327.3357
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.035    0.005   6.423 0.000  0.024  0.045
+C(year)[T.2006] -0.037    0.005  -7.837 0.000 -0.047 -0.028
+C(year)[T.2016] -0.075    0.005 -16.502 0.000 -0.084 -0.066
+wdi_unempilo     0.020    0.003   5.690 0.000  0.013  0.027
+Group Var        0.000    0.000                            
+===========================================================
+"
+Statistical Purist,jobs_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43344.5232
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.044    0.004  12.242 0.000  0.037  0.050
+C(year)[T.2006] -0.052    0.004 -12.198 0.000 -0.060 -0.043
+C(year)[T.2016] -0.085    0.005 -17.169 0.000 -0.095 -0.076
+socx_oecd        0.005    0.002   2.072 0.038  0.000  0.010
+Group Var        0.000    0.000                            
+===========================================================
+"
+Statistical Purist,jobs_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: jobs_c     
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1973     
+Min. group size:   1898    Log-Likelihood:     -43331.8197
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.010    0.010  0.945 0.345 -0.010  0.030
+C(year)[T.2006] -0.016    0.009 -1.757 0.079 -0.033  0.002
+C(year)[T.2016] -0.022    0.014 -1.574 0.116 -0.050  0.005
+gdp_oecd        -0.037    0.008 -4.670 0.000 -0.052 -0.021
+Group Var        0.001    0.001                           
+==========================================================
+"
+Statistical Purist,oldage_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: oldage_c   
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.3502     
+Min. group size:    1898    Log-Likelihood:     -63811.4652
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        3.607    0.053  67.583 0.000  3.502  3.711
+C(year)[T.2006] -0.017    0.006  -3.006 0.003 -0.029 -0.006
+C(year)[T.2016] -0.073    0.007 -10.530 0.000 -0.087 -0.060
+migstock_un      0.117    0.007  17.749 0.000  0.104  0.130
+Group Var        0.054    0.031                            
+===========================================================
+"
+Statistical Purist,oldage_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63961.3730
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.571    0.038 94.039 0.000  3.496  3.645
+C(year)[T.2006]  0.014    0.006  2.499 0.012  0.003  0.025
+C(year)[T.2016] -0.007    0.006 -1.257 0.209 -0.019  0.004
+netmigpct        0.015    0.004  4.065 0.000  0.008  0.023
+Group Var        0.027    0.015                           
+==========================================================
+"
+Statistical Purist,oldage_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3516     
+Min. group size:   1898    Log-Likelihood:     -63941.5864
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef. Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       3.551    0.034 104.087 0.000  3.484  3.618
+C(year)[T.2006] 0.044    0.006   6.946 0.000  0.032  0.057
+C(year)[T.2016] 0.011    0.006   1.768 0.077 -0.001  0.023
+wdi_unempilo    0.033    0.004   7.474 0.000  0.024  0.042
+Group Var       0.022    0.012                            
+==========================================================
+"
+Statistical Purist,oldage_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63963.9469
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.561    0.037 95.304 0.000  3.488  3.634
+C(year)[T.2006]  0.025    0.006  4.314 0.000  0.013  0.036
+C(year)[T.2016]  0.008    0.007  1.130 0.258 -0.006  0.022
+socx_oecd       -0.020    0.006 -3.216 0.001 -0.033 -0.008
+Group Var        0.026    0.015                           
+==========================================================
+"
+Statistical Purist,oldage_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63966.3106
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.585    0.039 92.051 0.000  3.509  3.661
+C(year)[T.2006] -0.000    0.010 -0.033 0.974 -0.021  0.020
+C(year)[T.2016] -0.038    0.016 -2.399 0.016 -0.070 -0.007
+gdp_oecd         0.019    0.009  2.239 0.025  0.002  0.036
+Group Var        0.027    0.015                           
+==========================================================
+"
+Statistical Purist,unemp_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6053     
+Min. group size:    1898    Log-Likelihood:     -83297.6625
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.976    0.053  55.643 0.000  2.871  3.081
+C(year)[T.2006] -0.095    0.008 -12.426 0.000 -0.110 -0.080
+C(year)[T.2016] -0.059    0.009  -6.480 0.000 -0.077 -0.041
+migstock_un     -0.063    0.009  -7.331 0.000 -0.080 -0.046
+Group Var        0.054    0.023                            
+===========================================================
+"
+Statistical Purist,unemp_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6048     
+Min. group size:    1898    Log-Likelihood:     -83269.2316
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.983    0.057  52.467 0.000  2.872  3.095
+C(year)[T.2006] -0.097    0.007 -13.162 0.000 -0.111 -0.082
+C(year)[T.2016] -0.088    0.008 -11.464 0.000 -0.103 -0.073
+netmigpct       -0.052    0.005 -10.567 0.000 -0.062 -0.043
+Group Var        0.061    0.026                            
+===========================================================
+"
+Statistical Purist,unemp_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6056     
+Min. group size:    1898    Log-Likelihood:     -83321.2904
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.990    0.056  53.047 0.000  2.879  3.100
+C(year)[T.2006] -0.103    0.008 -12.202 0.000 -0.119 -0.086
+C(year)[T.2016] -0.088    0.008 -10.856 0.000 -0.104 -0.072
+wdi_unempilo     0.015    0.006   2.669 0.008  0.004  0.027
+Group Var        0.060    0.026                            
+===========================================================
+"
+Statistical Purist,unemp_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6049     
+Min. group size:    1898    Log-Likelihood:     -83281.0115
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.975    0.065  45.818 0.000  2.848  3.102
+C(year)[T.2006] -0.094    0.007 -12.644 0.000 -0.109 -0.080
+C(year)[T.2016] -0.046    0.009  -4.938 0.000 -0.064 -0.028
+socx_oecd       -0.078    0.008  -9.317 0.000 -0.094 -0.061
+Group Var        0.079    0.034                            
+===========================================================
+"
+Statistical Purist,unemp_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: unemp_c    
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.6057     
+Min. group size:   1898    Log-Likelihood:     -83324.0498
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.003    0.059 50.801 0.000  2.887  3.119
+C(year)[T.2006] -0.121    0.014 -8.927 0.000 -0.147 -0.094
+C(year)[T.2016] -0.106    0.021 -5.068 0.000 -0.148 -0.065
+gdp_oecd         0.006    0.011  0.533 0.594 -0.016  0.028
+Group Var        0.064    0.027                           
+==========================================================
+"
+Statistical Purist,housing_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: housing_c  
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1521     
+Min. group size:    1898    Log-Likelihood:     -34074.7085
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.031    0.016   1.933 0.053 -0.000  0.062
+C(year)[T.2006] -0.025    0.004  -6.513 0.000 -0.033 -0.018
+C(year)[T.2016] -0.061    0.005 -13.075 0.000 -0.070 -0.052
+migstock_un      0.073    0.004  16.384 0.000  0.065  0.082
+Group Var        0.005    0.004                            
+===========================================================
+"
+Statistical Purist,housing_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34184.0657
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.002  2.310 0.021  0.001  0.010
+C(year)[T.2006] -0.002    0.003 -0.669 0.503 -0.009  0.004
+C(year)[T.2016] -0.017    0.004 -4.585 0.000 -0.024 -0.010
+netmigpct        0.003    0.001  2.611 0.009  0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,housing_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34183.2108
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.004    0.002  1.599 0.110 -0.001  0.009
+C(year)[T.2006]  0.001    0.003  0.268 0.788 -0.006  0.008
+C(year)[T.2016] -0.015    0.004 -3.972 0.000 -0.022 -0.008
+wdi_unempilo     0.004    0.000 12.124 0.000  0.003  0.004
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,housing_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34185.3753
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.003  2.416 0.016  0.001  0.011
+C(year)[T.2006] -0.002    0.004 -0.662 0.508 -0.009  0.005
+C(year)[T.2016] -0.018    0.004 -4.776 0.000 -0.026 -0.011
+socx_oecd        0.002    0.001  1.340 0.180 -0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,housing_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1525     
+Min. group size:   1898    Log-Likelihood:     -34166.3612
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.055    0.011  4.865 0.000  0.033  0.077
+C(year)[T.2006] -0.055    0.007 -7.328 0.000 -0.069 -0.040
+C(year)[T.2016] -0.108    0.012 -9.117 0.000 -0.131 -0.085
+gdp_oecd         0.052    0.006  8.057 0.000  0.039  0.064
+Group Var        0.002    0.002                           
+==========================================================
+"
+Statistical Purist,health_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0430    
+Min. group size:    1898    Log-Likelihood:     10934.8242
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.012    0.008  1.528 0.127 -0.003  0.026
+C(year)[T.2006] -0.007    0.002 -3.552 0.000 -0.011 -0.003
+C(year)[T.2016] -0.024    0.002 -9.844 0.000 -0.029 -0.020
+migstock_un      0.035    0.002 14.628 0.000  0.030  0.040
+Group Var        0.001    0.002                           
+==========================================================
+"
+Statistical Purist,health_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0431    
+Min. group size:    1898    Log-Likelihood:     10858.6296
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.001  0.067 0.946 -0.002  0.003
+C(year)[T.2006]  0.003    0.002  1.540 0.124 -0.001  0.006
+C(year)[T.2016] -0.004    0.002 -1.961 0.050 -0.007 -0.000
+netmigpct        0.003                                    
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,health_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10853.2686
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.001    0.001 -0.937 0.349 -0.004  0.001
+C(year)[T.2006]  0.005    0.002  3.028 0.002  0.002  0.009
+C(year)[T.2016] -0.003    0.002 -1.303 0.193 -0.006  0.001
+wdi_unempilo     0.002                                    
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,health_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10848.7946
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.000    0.001 -0.122 0.903 -0.003  0.002
+C(year)[T.2006]  0.004    0.002  1.887 0.059 -0.000  0.007
+C(year)[T.2016] -0.004    0.002 -1.863 0.063 -0.008  0.000
+socx_oecd        0.000    0.001  0.189 0.850 -0.001  0.002
+Group Var        0.000                                    
+==========================================================
+"
+Statistical Purist,health_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10849.2051
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.002  0.188 0.851 -0.003  0.003
+C(year)[T.2006]  0.003    0.002  1.423 0.155 -0.001  0.007
+C(year)[T.2016] -0.005    0.003 -1.812 0.070 -0.010  0.000
+gdp_oecd         0.001    0.001  0.594 0.552 -0.001  0.003
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,incdiff_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8475     
+Min. group size:   1898    Log-Likelihood:     -95290.8166
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.891    0.057 50.632 0.000  2.779  3.003
+C(year)[T.2006]  0.108    0.009 11.940 0.000  0.090  0.125
+C(year)[T.2016]  0.196    0.011 18.172 0.000  0.175  0.217
+migstock_un     -0.073    0.010 -7.210 0.000 -0.093 -0.053
+Group Var        0.061    0.022                           
+==========================================================
+"
+Social Scientist,incdiff_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8474     
+Min. group size:   1898    Log-Likelihood:     -95288.7497
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.904    0.060 48.657 0.000  2.787  3.021
+C(year)[T.2006]  0.100    0.009 11.522 0.000  0.083  0.117
+C(year)[T.2016]  0.160    0.009 17.655 0.000  0.143  0.178
+netmigpct       -0.044    0.006 -7.554 0.000 -0.056 -0.033
+Group Var        0.067    0.024                           
+==========================================================
+"
+Social Scientist,incdiff_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+=========================================================
+Model:            MixedLM Dependent Variable: incdiff_c  
+No. Observations: 71266   Method:             REML       
+No. Groups:       19      Scale:              0.8481     
+Min. group size:  1898    Log-Likelihood:     -95317.0981
+Max. group size:  7597    Converged:          Yes        
+Mean group size:  3750.8                                 
+---------------------------------------------------------
+                Coef. Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------
+Intercept       2.916    0.063 46.458 0.000  2.793  3.039
+C(year)[T.2006] 0.085    0.010  8.566 0.000  0.066  0.105
+C(year)[T.2016] 0.154    0.010 15.967 0.000  0.135  0.173
+wdi_unempilo    0.000    0.007  0.066 0.947 -0.013  0.014
+Group Var       0.074    0.027                           
+=========================================================
+"
+Social Scientist,incdiff_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.7381
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.916    0.063 46.408 0.000  2.792  3.039
+C(year)[T.2006]  0.085    0.009  9.640 0.000  0.068  0.102
+C(year)[T.2016]  0.154    0.011 13.989 0.000  0.133  0.176
+socx_oecd       -0.001    0.010 -0.085 0.932 -0.020  0.018
+Group Var        0.074    0.027                           
+==========================================================
+"
+Social Scientist,incdiff_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.0883
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.905    0.063 46.169 0.000  2.782  3.028
+C(year)[T.2006]  0.096    0.016  6.009 0.000  0.065  0.128
+C(year)[T.2016]  0.173    0.025  6.947 0.000  0.124  0.222
+gdp_oecd        -0.011    0.013 -0.841 0.401 -0.037  0.015
+Group Var        0.071    0.026                           
+==========================================================
+"
+Social Scientist,jobs_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1971     
+Min. group size:    1898    Log-Likelihood:     -43302.3828
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.062    0.013   4.907 0.000  0.037  0.087
+C(year)[T.2006] -0.069    0.004 -15.688 0.000 -0.078 -0.060
+C(year)[T.2016] -0.116    0.005 -21.702 0.000 -0.127 -0.106
+migstock_un      0.052    0.005   9.924 0.000  0.042  0.063
+Group Var        0.003    0.002                            
+===========================================================
+"
+Social Scientist,jobs_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43347.0851
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.042    0.003  12.047 0.000  0.035  0.048
+C(year)[T.2006] -0.050    0.004 -11.735 0.000 -0.058 -0.042
+C(year)[T.2016] -0.082    0.005 -17.753 0.000 -0.091 -0.073
+netmigpct       -0.000    0.002  -0.026 0.979 -0.004  0.004
+Group Var        0.000    0.000                            
+===========================================================
+"
+Social Scientist,jobs_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1973     
+Min. group size:    1898    Log-Likelihood:     -43327.3357
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.035    0.005   6.423 0.000  0.024  0.045
+C(year)[T.2006] -0.037    0.005  -7.837 0.000 -0.047 -0.028
+C(year)[T.2016] -0.075    0.005 -16.502 0.000 -0.084 -0.066
+wdi_unempilo     0.020    0.003   5.690 0.000  0.013  0.027
+Group Var        0.000    0.000                            
+===========================================================
+"
+Social Scientist,jobs_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43344.5232
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.044    0.004  12.242 0.000  0.037  0.050
+C(year)[T.2006] -0.052    0.004 -12.198 0.000 -0.060 -0.043
+C(year)[T.2016] -0.085    0.005 -17.169 0.000 -0.095 -0.076
+socx_oecd        0.005    0.002   2.072 0.038  0.000  0.010
+Group Var        0.000    0.000                            
+===========================================================
+"
+Social Scientist,jobs_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: jobs_c     
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1973     
+Min. group size:   1898    Log-Likelihood:     -43331.8197
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.010    0.010  0.945 0.345 -0.010  0.030
+C(year)[T.2006] -0.016    0.009 -1.757 0.079 -0.033  0.002
+C(year)[T.2016] -0.022    0.014 -1.574 0.116 -0.050  0.005
+gdp_oecd        -0.037    0.008 -4.670 0.000 -0.052 -0.021
+Group Var        0.001    0.001                           
+==========================================================
+"
+Social Scientist,oldage_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: oldage_c   
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.3502     
+Min. group size:    1898    Log-Likelihood:     -63811.4652
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        3.607    0.053  67.583 0.000  3.502  3.711
+C(year)[T.2006] -0.017    0.006  -3.006 0.003 -0.029 -0.006
+C(year)[T.2016] -0.073    0.007 -10.530 0.000 -0.087 -0.060
+migstock_un      0.117    0.007  17.749 0.000  0.104  0.130
+Group Var        0.054    0.031                            
+===========================================================
+"
+Social Scientist,oldage_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63961.3730
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.571    0.038 94.039 0.000  3.496  3.645
+C(year)[T.2006]  0.014    0.006  2.499 0.012  0.003  0.025
+C(year)[T.2016] -0.007    0.006 -1.257 0.209 -0.019  0.004
+netmigpct        0.015    0.004  4.065 0.000  0.008  0.023
+Group Var        0.027    0.015                           
+==========================================================
+"
+Social Scientist,oldage_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3516     
+Min. group size:   1898    Log-Likelihood:     -63941.5864
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef. Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       3.551    0.034 104.087 0.000  3.484  3.618
+C(year)[T.2006] 0.044    0.006   6.946 0.000  0.032  0.057
+C(year)[T.2016] 0.011    0.006   1.768 0.077 -0.001  0.023
+wdi_unempilo    0.033    0.004   7.474 0.000  0.024  0.042
+Group Var       0.022    0.012                            
+==========================================================
+"
+Social Scientist,oldage_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63963.9469
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.561    0.037 95.304 0.000  3.488  3.634
+C(year)[T.2006]  0.025    0.006  4.314 0.000  0.013  0.036
+C(year)[T.2016]  0.008    0.007  1.130 0.258 -0.006  0.022
+socx_oecd       -0.020    0.006 -3.216 0.001 -0.033 -0.008
+Group Var        0.026    0.015                           
+==========================================================
+"
+Social Scientist,oldage_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63966.3106
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.585    0.039 92.051 0.000  3.509  3.661
+C(year)[T.2006] -0.000    0.010 -0.033 0.974 -0.021  0.020
+C(year)[T.2016] -0.038    0.016 -2.399 0.016 -0.070 -0.007
+gdp_oecd         0.019    0.009  2.239 0.025  0.002  0.036
+Group Var        0.027    0.015                           
+==========================================================
+"
+Social Scientist,unemp_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6053     
+Min. group size:    1898    Log-Likelihood:     -83297.6625
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.976    0.053  55.643 0.000  2.871  3.081
+C(year)[T.2006] -0.095    0.008 -12.426 0.000 -0.110 -0.080
+C(year)[T.2016] -0.059    0.009  -6.480 0.000 -0.077 -0.041
+migstock_un     -0.063    0.009  -7.331 0.000 -0.080 -0.046
+Group Var        0.054    0.023                            
+===========================================================
+"
+Social Scientist,unemp_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6048     
+Min. group size:    1898    Log-Likelihood:     -83269.2316
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.983    0.057  52.467 0.000  2.872  3.095
+C(year)[T.2006] -0.097    0.007 -13.162 0.000 -0.111 -0.082
+C(year)[T.2016] -0.088    0.008 -11.464 0.000 -0.103 -0.073
+netmigpct       -0.052    0.005 -10.567 0.000 -0.062 -0.043
+Group Var        0.061    0.026                            
+===========================================================
+"
+Social Scientist,unemp_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6056     
+Min. group size:    1898    Log-Likelihood:     -83321.2904
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.990    0.056  53.047 0.000  2.879  3.100
+C(year)[T.2006] -0.103    0.008 -12.202 0.000 -0.119 -0.086
+C(year)[T.2016] -0.088    0.008 -10.856 0.000 -0.104 -0.072
+wdi_unempilo     0.015    0.006   2.669 0.008  0.004  0.027
+Group Var        0.060    0.026                            
+===========================================================
+"
+Social Scientist,unemp_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6049     
+Min. group size:    1898    Log-Likelihood:     -83281.0115
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.975    0.065  45.818 0.000  2.848  3.102
+C(year)[T.2006] -0.094    0.007 -12.644 0.000 -0.109 -0.080
+C(year)[T.2016] -0.046    0.009  -4.938 0.000 -0.064 -0.028
+socx_oecd       -0.078    0.008  -9.317 0.000 -0.094 -0.061
+Group Var        0.079    0.034                            
+===========================================================
+"
+Social Scientist,unemp_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: unemp_c    
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.6057     
+Min. group size:   1898    Log-Likelihood:     -83324.0498
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.003    0.059 50.801 0.000  2.887  3.119
+C(year)[T.2006] -0.121    0.014 -8.927 0.000 -0.147 -0.094
+C(year)[T.2016] -0.106    0.021 -5.068 0.000 -0.148 -0.065
+gdp_oecd         0.006    0.011  0.533 0.594 -0.016  0.028
+Group Var        0.064    0.027                           
+==========================================================
+"
+Social Scientist,housing_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: housing_c  
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1521     
+Min. group size:    1898    Log-Likelihood:     -34074.7085
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.031    0.016   1.933 0.053 -0.000  0.062
+C(year)[T.2006] -0.025    0.004  -6.513 0.000 -0.033 -0.018
+C(year)[T.2016] -0.061    0.005 -13.075 0.000 -0.070 -0.052
+migstock_un      0.073    0.004  16.384 0.000  0.065  0.082
+Group Var        0.005    0.004                            
+===========================================================
+"
+Social Scientist,housing_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34184.0657
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.002  2.310 0.021  0.001  0.010
+C(year)[T.2006] -0.002    0.003 -0.669 0.503 -0.009  0.004
+C(year)[T.2016] -0.017    0.004 -4.585 0.000 -0.024 -0.010
+netmigpct        0.003    0.001  2.611 0.009  0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,housing_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34183.2108
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.004    0.002  1.599 0.110 -0.001  0.009
+C(year)[T.2006]  0.001    0.003  0.268 0.788 -0.006  0.008
+C(year)[T.2016] -0.015    0.004 -3.972 0.000 -0.022 -0.008
+wdi_unempilo     0.004    0.000 12.124 0.000  0.003  0.004
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,housing_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34185.3753
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.003  2.416 0.016  0.001  0.011
+C(year)[T.2006] -0.002    0.004 -0.662 0.508 -0.009  0.005
+C(year)[T.2016] -0.018    0.004 -4.776 0.000 -0.026 -0.011
+socx_oecd        0.002    0.001  1.340 0.180 -0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,housing_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1525     
+Min. group size:   1898    Log-Likelihood:     -34166.3612
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.055    0.011  4.865 0.000  0.033  0.077
+C(year)[T.2006] -0.055    0.007 -7.328 0.000 -0.069 -0.040
+C(year)[T.2016] -0.108    0.012 -9.117 0.000 -0.131 -0.085
+gdp_oecd         0.052    0.006  8.057 0.000  0.039  0.064
+Group Var        0.002    0.002                           
+==========================================================
+"
+Social Scientist,health_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0430    
+Min. group size:    1898    Log-Likelihood:     10934.8242
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.012    0.008  1.528 0.127 -0.003  0.026
+C(year)[T.2006] -0.007    0.002 -3.552 0.000 -0.011 -0.003
+C(year)[T.2016] -0.024    0.002 -9.844 0.000 -0.029 -0.020
+migstock_un      0.035    0.002 14.628 0.000  0.030  0.040
+Group Var        0.001    0.002                           
+==========================================================
+"
+Social Scientist,health_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0431    
+Min. group size:    1898    Log-Likelihood:     10858.6296
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.001  0.067 0.946 -0.002  0.003
+C(year)[T.2006]  0.003    0.002  1.540 0.124 -0.001  0.006
+C(year)[T.2016] -0.004    0.002 -1.961 0.050 -0.007 -0.000
+netmigpct        0.003                                    
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,health_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10853.2686
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.001    0.001 -0.937 0.349 -0.004  0.001
+C(year)[T.2006]  0.005    0.002  3.028 0.002  0.002  0.009
+C(year)[T.2016] -0.003    0.002 -1.303 0.193 -0.006  0.001
+wdi_unempilo     0.002                                    
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,health_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10848.7946
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.000    0.001 -0.122 0.903 -0.003  0.002
+C(year)[T.2006]  0.004    0.002  1.887 0.059 -0.000  0.007
+C(year)[T.2016] -0.004    0.002 -1.863 0.063 -0.008  0.000
+socx_oecd        0.000    0.001  0.189 0.850 -0.001  0.002
+Group Var        0.000                                    
+==========================================================
+"
+Social Scientist,health_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10849.2051
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.002  0.188 0.851 -0.003  0.003
+C(year)[T.2006]  0.003    0.002  1.423 0.155 -0.001  0.007
+C(year)[T.2016] -0.005    0.003 -1.812 0.070 -0.010  0.000
+gdp_oecd         0.001    0.001  0.594 0.552 -0.001  0.003
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,incdiff_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8475     
+Min. group size:   1898    Log-Likelihood:     -95290.8166
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.891    0.057 50.632 0.000  2.779  3.003
+C(year)[T.2006]  0.108    0.009 11.940 0.000  0.090  0.125
+C(year)[T.2016]  0.196    0.011 18.172 0.000  0.175  0.217
+migstock_un     -0.073    0.010 -7.210 0.000 -0.093 -0.053
+Group Var        0.061    0.022                           
+==========================================================
+"
+Innovative Modeler,incdiff_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8474     
+Min. group size:   1898    Log-Likelihood:     -95288.7497
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.904    0.060 48.657 0.000  2.787  3.021
+C(year)[T.2006]  0.100    0.009 11.522 0.000  0.083  0.117
+C(year)[T.2016]  0.160    0.009 17.655 0.000  0.143  0.178
+netmigpct       -0.044    0.006 -7.554 0.000 -0.056 -0.033
+Group Var        0.067    0.024                           
+==========================================================
+"
+Innovative Modeler,incdiff_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+=========================================================
+Model:            MixedLM Dependent Variable: incdiff_c  
+No. Observations: 71266   Method:             REML       
+No. Groups:       19      Scale:              0.8481     
+Min. group size:  1898    Log-Likelihood:     -95317.0981
+Max. group size:  7597    Converged:          Yes        
+Mean group size:  3750.8                                 
+---------------------------------------------------------
+                Coef. Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------
+Intercept       2.916    0.063 46.458 0.000  2.793  3.039
+C(year)[T.2006] 0.085    0.010  8.566 0.000  0.066  0.105
+C(year)[T.2016] 0.154    0.010 15.967 0.000  0.135  0.173
+wdi_unempilo    0.000    0.007  0.066 0.947 -0.013  0.014
+Group Var       0.074    0.027                           
+=========================================================
+"
+Innovative Modeler,incdiff_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.7381
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.916    0.063 46.408 0.000  2.792  3.039
+C(year)[T.2006]  0.085    0.009  9.640 0.000  0.068  0.102
+C(year)[T.2016]  0.154    0.011 13.989 0.000  0.133  0.176
+socx_oecd       -0.001    0.010 -0.085 0.932 -0.020  0.018
+Group Var        0.074    0.027                           
+==========================================================
+"
+Innovative Modeler,incdiff_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.0883
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.905    0.063 46.169 0.000  2.782  3.028
+C(year)[T.2006]  0.096    0.016  6.009 0.000  0.065  0.128
+C(year)[T.2016]  0.173    0.025  6.947 0.000  0.124  0.222
+gdp_oecd        -0.011    0.013 -0.841 0.401 -0.037  0.015
+Group Var        0.071    0.026                           
+==========================================================
+"
+Innovative Modeler,jobs_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1971     
+Min. group size:    1898    Log-Likelihood:     -43302.3828
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.062    0.013   4.907 0.000  0.037  0.087
+C(year)[T.2006] -0.069    0.004 -15.688 0.000 -0.078 -0.060
+C(year)[T.2016] -0.116    0.005 -21.702 0.000 -0.127 -0.106
+migstock_un      0.052    0.005   9.924 0.000  0.042  0.063
+Group Var        0.003    0.002                            
+===========================================================
+"
+Innovative Modeler,jobs_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43347.0851
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.042    0.003  12.047 0.000  0.035  0.048
+C(year)[T.2006] -0.050    0.004 -11.735 0.000 -0.058 -0.042
+C(year)[T.2016] -0.082    0.005 -17.753 0.000 -0.091 -0.073
+netmigpct       -0.000    0.002  -0.026 0.979 -0.004  0.004
+Group Var        0.000    0.000                            
+===========================================================
+"
+Innovative Modeler,jobs_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1973     
+Min. group size:    1898    Log-Likelihood:     -43327.3357
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.035    0.005   6.423 0.000  0.024  0.045
+C(year)[T.2006] -0.037    0.005  -7.837 0.000 -0.047 -0.028
+C(year)[T.2016] -0.075    0.005 -16.502 0.000 -0.084 -0.066
+wdi_unempilo     0.020    0.003   5.690 0.000  0.013  0.027
+Group Var        0.000    0.000                            
+===========================================================
+"
+Innovative Modeler,jobs_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43344.5232
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.044    0.004  12.242 0.000  0.037  0.050
+C(year)[T.2006] -0.052    0.004 -12.198 0.000 -0.060 -0.043
+C(year)[T.2016] -0.085    0.005 -17.169 0.000 -0.095 -0.076
+socx_oecd        0.005    0.002   2.072 0.038  0.000  0.010
+Group Var        0.000    0.000                            
+===========================================================
+"
+Innovative Modeler,jobs_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: jobs_c     
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1973     
+Min. group size:   1898    Log-Likelihood:     -43331.8197
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.010    0.010  0.945 0.345 -0.010  0.030
+C(year)[T.2006] -0.016    0.009 -1.757 0.079 -0.033  0.002
+C(year)[T.2016] -0.022    0.014 -1.574 0.116 -0.050  0.005
+gdp_oecd        -0.037    0.008 -4.670 0.000 -0.052 -0.021
+Group Var        0.001    0.001                           
+==========================================================
+"
+Innovative Modeler,oldage_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: oldage_c   
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.3502     
+Min. group size:    1898    Log-Likelihood:     -63811.4652
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        3.607    0.053  67.583 0.000  3.502  3.711
+C(year)[T.2006] -0.017    0.006  -3.006 0.003 -0.029 -0.006
+C(year)[T.2016] -0.073    0.007 -10.530 0.000 -0.087 -0.060
+migstock_un      0.117    0.007  17.749 0.000  0.104  0.130
+Group Var        0.054    0.031                            
+===========================================================
+"
+Innovative Modeler,oldage_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63961.3730
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.571    0.038 94.039 0.000  3.496  3.645
+C(year)[T.2006]  0.014    0.006  2.499 0.012  0.003  0.025
+C(year)[T.2016] -0.007    0.006 -1.257 0.209 -0.019  0.004
+netmigpct        0.015    0.004  4.065 0.000  0.008  0.023
+Group Var        0.027    0.015                           
+==========================================================
+"
+Innovative Modeler,oldage_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3516     
+Min. group size:   1898    Log-Likelihood:     -63941.5864
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef. Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       3.551    0.034 104.087 0.000  3.484  3.618
+C(year)[T.2006] 0.044    0.006   6.946 0.000  0.032  0.057
+C(year)[T.2016] 0.011    0.006   1.768 0.077 -0.001  0.023
+wdi_unempilo    0.033    0.004   7.474 0.000  0.024  0.042
+Group Var       0.022    0.012                            
+==========================================================
+"
+Innovative Modeler,oldage_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63963.9469
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.561    0.037 95.304 0.000  3.488  3.634
+C(year)[T.2006]  0.025    0.006  4.314 0.000  0.013  0.036
+C(year)[T.2016]  0.008    0.007  1.130 0.258 -0.006  0.022
+socx_oecd       -0.020    0.006 -3.216 0.001 -0.033 -0.008
+Group Var        0.026    0.015                           
+==========================================================
+"
+Innovative Modeler,oldage_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63966.3106
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.585    0.039 92.051 0.000  3.509  3.661
+C(year)[T.2006] -0.000    0.010 -0.033 0.974 -0.021  0.020
+C(year)[T.2016] -0.038    0.016 -2.399 0.016 -0.070 -0.007
+gdp_oecd         0.019    0.009  2.239 0.025  0.002  0.036
+Group Var        0.027    0.015                           
+==========================================================
+"
+Innovative Modeler,unemp_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6053     
+Min. group size:    1898    Log-Likelihood:     -83297.6625
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.976    0.053  55.643 0.000  2.871  3.081
+C(year)[T.2006] -0.095    0.008 -12.426 0.000 -0.110 -0.080
+C(year)[T.2016] -0.059    0.009  -6.480 0.000 -0.077 -0.041
+migstock_un     -0.063    0.009  -7.331 0.000 -0.080 -0.046
+Group Var        0.054    0.023                            
+===========================================================
+"
+Innovative Modeler,unemp_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6048     
+Min. group size:    1898    Log-Likelihood:     -83269.2316
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.983    0.057  52.467 0.000  2.872  3.095
+C(year)[T.2006] -0.097    0.007 -13.162 0.000 -0.111 -0.082
+C(year)[T.2016] -0.088    0.008 -11.464 0.000 -0.103 -0.073
+netmigpct       -0.052    0.005 -10.567 0.000 -0.062 -0.043
+Group Var        0.061    0.026                            
+===========================================================
+"
+Innovative Modeler,unemp_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6056     
+Min. group size:    1898    Log-Likelihood:     -83321.2904
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.990    0.056  53.047 0.000  2.879  3.100
+C(year)[T.2006] -0.103    0.008 -12.202 0.000 -0.119 -0.086
+C(year)[T.2016] -0.088    0.008 -10.856 0.000 -0.104 -0.072
+wdi_unempilo     0.015    0.006   2.669 0.008  0.004  0.027
+Group Var        0.060    0.026                            
+===========================================================
+"
+Innovative Modeler,unemp_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6049     
+Min. group size:    1898    Log-Likelihood:     -83281.0115
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.975    0.065  45.818 0.000  2.848  3.102
+C(year)[T.2006] -0.094    0.007 -12.644 0.000 -0.109 -0.080
+C(year)[T.2016] -0.046    0.009  -4.938 0.000 -0.064 -0.028
+socx_oecd       -0.078    0.008  -9.317 0.000 -0.094 -0.061
+Group Var        0.079    0.034                            
+===========================================================
+"
+Innovative Modeler,unemp_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: unemp_c    
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.6057     
+Min. group size:   1898    Log-Likelihood:     -83324.0498
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.003    0.059 50.801 0.000  2.887  3.119
+C(year)[T.2006] -0.121    0.014 -8.927 0.000 -0.147 -0.094
+C(year)[T.2016] -0.106    0.021 -5.068 0.000 -0.148 -0.065
+gdp_oecd         0.006    0.011  0.533 0.594 -0.016  0.028
+Group Var        0.064    0.027                           
+==========================================================
+"
+Innovative Modeler,housing_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: housing_c  
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1521     
+Min. group size:    1898    Log-Likelihood:     -34074.7085
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.031    0.016   1.933 0.053 -0.000  0.062
+C(year)[T.2006] -0.025    0.004  -6.513 0.000 -0.033 -0.018
+C(year)[T.2016] -0.061    0.005 -13.075 0.000 -0.070 -0.052
+migstock_un      0.073    0.004  16.384 0.000  0.065  0.082
+Group Var        0.005    0.004                            
+===========================================================
+"
+Innovative Modeler,housing_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34184.0657
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.002  2.310 0.021  0.001  0.010
+C(year)[T.2006] -0.002    0.003 -0.669 0.503 -0.009  0.004
+C(year)[T.2016] -0.017    0.004 -4.585 0.000 -0.024 -0.010
+netmigpct        0.003    0.001  2.611 0.009  0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,housing_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34183.2108
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.004    0.002  1.599 0.110 -0.001  0.009
+C(year)[T.2006]  0.001    0.003  0.268 0.788 -0.006  0.008
+C(year)[T.2016] -0.015    0.004 -3.972 0.000 -0.022 -0.008
+wdi_unempilo     0.004    0.000 12.124 0.000  0.003  0.004
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,housing_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34185.3753
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.003  2.416 0.016  0.001  0.011
+C(year)[T.2006] -0.002    0.004 -0.662 0.508 -0.009  0.005
+C(year)[T.2016] -0.018    0.004 -4.776 0.000 -0.026 -0.011
+socx_oecd        0.002    0.001  1.340 0.180 -0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,housing_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1525     
+Min. group size:   1898    Log-Likelihood:     -34166.3612
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.055    0.011  4.865 0.000  0.033  0.077
+C(year)[T.2006] -0.055    0.007 -7.328 0.000 -0.069 -0.040
+C(year)[T.2016] -0.108    0.012 -9.117 0.000 -0.131 -0.085
+gdp_oecd         0.052    0.006  8.057 0.000  0.039  0.064
+Group Var        0.002    0.002                           
+==========================================================
+"
+Innovative Modeler,health_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0430    
+Min. group size:    1898    Log-Likelihood:     10934.8242
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.012    0.008  1.528 0.127 -0.003  0.026
+C(year)[T.2006] -0.007    0.002 -3.552 0.000 -0.011 -0.003
+C(year)[T.2016] -0.024    0.002 -9.844 0.000 -0.029 -0.020
+migstock_un      0.035    0.002 14.628 0.000  0.030  0.040
+Group Var        0.001    0.002                           
+==========================================================
+"
+Innovative Modeler,health_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0431    
+Min. group size:    1898    Log-Likelihood:     10858.6296
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.001  0.067 0.946 -0.002  0.003
+C(year)[T.2006]  0.003    0.002  1.540 0.124 -0.001  0.006
+C(year)[T.2016] -0.004    0.002 -1.961 0.050 -0.007 -0.000
+netmigpct        0.003                                    
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,health_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10853.2686
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.001    0.001 -0.937 0.349 -0.004  0.001
+C(year)[T.2006]  0.005    0.002  3.028 0.002  0.002  0.009
+C(year)[T.2016] -0.003    0.002 -1.303 0.193 -0.006  0.001
+wdi_unempilo     0.002                                    
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,health_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10848.7946
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.000    0.001 -0.122 0.903 -0.003  0.002
+C(year)[T.2006]  0.004    0.002  1.887 0.059 -0.000  0.007
+C(year)[T.2016] -0.004    0.002 -1.863 0.063 -0.008  0.000
+socx_oecd        0.000    0.001  0.189 0.850 -0.001  0.002
+Group Var        0.000                                    
+==========================================================
+"
+Innovative Modeler,health_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10849.2051
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.002  0.188 0.851 -0.003  0.003
+C(year)[T.2006]  0.003    0.002  1.423 0.155 -0.001  0.007
+C(year)[T.2016] -0.005    0.003 -1.812 0.070 -0.010  0.000
+gdp_oecd         0.001    0.001  0.594 0.552 -0.001  0.003
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,incdiff_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8475     
+Min. group size:   1898    Log-Likelihood:     -95290.8166
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.891    0.057 50.632 0.000  2.779  3.003
+C(year)[T.2006]  0.108    0.009 11.940 0.000  0.090  0.125
+C(year)[T.2016]  0.196    0.011 18.172 0.000  0.175  0.217
+migstock_un     -0.073    0.010 -7.210 0.000 -0.093 -0.053
+Group Var        0.061    0.022                           
+==========================================================
+"
+Hypothesis-Driven Analyst,incdiff_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8474     
+Min. group size:   1898    Log-Likelihood:     -95288.7497
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.904    0.060 48.657 0.000  2.787  3.021
+C(year)[T.2006]  0.100    0.009 11.522 0.000  0.083  0.117
+C(year)[T.2016]  0.160    0.009 17.655 0.000  0.143  0.178
+netmigpct       -0.044    0.006 -7.554 0.000 -0.056 -0.033
+Group Var        0.067    0.024                           
+==========================================================
+"
+Hypothesis-Driven Analyst,incdiff_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+=========================================================
+Model:            MixedLM Dependent Variable: incdiff_c  
+No. Observations: 71266   Method:             REML       
+No. Groups:       19      Scale:              0.8481     
+Min. group size:  1898    Log-Likelihood:     -95317.0981
+Max. group size:  7597    Converged:          Yes        
+Mean group size:  3750.8                                 
+---------------------------------------------------------
+                Coef. Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------
+Intercept       2.916    0.063 46.458 0.000  2.793  3.039
+C(year)[T.2006] 0.085    0.010  8.566 0.000  0.066  0.105
+C(year)[T.2016] 0.154    0.010 15.967 0.000  0.135  0.173
+wdi_unempilo    0.000    0.007  0.066 0.947 -0.013  0.014
+Group Var       0.074    0.027                           
+=========================================================
+"
+Hypothesis-Driven Analyst,incdiff_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.7381
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.916    0.063 46.408 0.000  2.792  3.039
+C(year)[T.2006]  0.085    0.009  9.640 0.000  0.068  0.102
+C(year)[T.2016]  0.154    0.011 13.989 0.000  0.133  0.176
+socx_oecd       -0.001    0.010 -0.085 0.932 -0.020  0.018
+Group Var        0.074    0.027                           
+==========================================================
+"
+Hypothesis-Driven Analyst,incdiff_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.0883
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.905    0.063 46.169 0.000  2.782  3.028
+C(year)[T.2006]  0.096    0.016  6.009 0.000  0.065  0.128
+C(year)[T.2016]  0.173    0.025  6.947 0.000  0.124  0.222
+gdp_oecd        -0.011    0.013 -0.841 0.401 -0.037  0.015
+Group Var        0.071    0.026                           
+==========================================================
+"
+Hypothesis-Driven Analyst,jobs_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1971     
+Min. group size:    1898    Log-Likelihood:     -43302.3828
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.062    0.013   4.907 0.000  0.037  0.087
+C(year)[T.2006] -0.069    0.004 -15.688 0.000 -0.078 -0.060
+C(year)[T.2016] -0.116    0.005 -21.702 0.000 -0.127 -0.106
+migstock_un      0.052    0.005   9.924 0.000  0.042  0.063
+Group Var        0.003    0.002                            
+===========================================================
+"
+Hypothesis-Driven Analyst,jobs_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43347.0851
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.042    0.003  12.047 0.000  0.035  0.048
+C(year)[T.2006] -0.050    0.004 -11.735 0.000 -0.058 -0.042
+C(year)[T.2016] -0.082    0.005 -17.753 0.000 -0.091 -0.073
+netmigpct       -0.000    0.002  -0.026 0.979 -0.004  0.004
+Group Var        0.000    0.000                            
+===========================================================
+"
+Hypothesis-Driven Analyst,jobs_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1973     
+Min. group size:    1898    Log-Likelihood:     -43327.3357
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.035    0.005   6.423 0.000  0.024  0.045
+C(year)[T.2006] -0.037    0.005  -7.837 0.000 -0.047 -0.028
+C(year)[T.2016] -0.075    0.005 -16.502 0.000 -0.084 -0.066
+wdi_unempilo     0.020    0.003   5.690 0.000  0.013  0.027
+Group Var        0.000    0.000                            
+===========================================================
+"
+Hypothesis-Driven Analyst,jobs_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43344.5232
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.044    0.004  12.242 0.000  0.037  0.050
+C(year)[T.2006] -0.052    0.004 -12.198 0.000 -0.060 -0.043
+C(year)[T.2016] -0.085    0.005 -17.169 0.000 -0.095 -0.076
+socx_oecd        0.005    0.002   2.072 0.038  0.000  0.010
+Group Var        0.000    0.000                            
+===========================================================
+"
+Hypothesis-Driven Analyst,jobs_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: jobs_c     
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1973     
+Min. group size:   1898    Log-Likelihood:     -43331.8197
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.010    0.010  0.945 0.345 -0.010  0.030
+C(year)[T.2006] -0.016    0.009 -1.757 0.079 -0.033  0.002
+C(year)[T.2016] -0.022    0.014 -1.574 0.116 -0.050  0.005
+gdp_oecd        -0.037    0.008 -4.670 0.000 -0.052 -0.021
+Group Var        0.001    0.001                           
+==========================================================
+"
+Hypothesis-Driven Analyst,oldage_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: oldage_c   
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.3502     
+Min. group size:    1898    Log-Likelihood:     -63811.4652
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        3.607    0.053  67.583 0.000  3.502  3.711
+C(year)[T.2006] -0.017    0.006  -3.006 0.003 -0.029 -0.006
+C(year)[T.2016] -0.073    0.007 -10.530 0.000 -0.087 -0.060
+migstock_un      0.117    0.007  17.749 0.000  0.104  0.130
+Group Var        0.054    0.031                            
+===========================================================
+"
+Hypothesis-Driven Analyst,oldage_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63961.3730
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.571    0.038 94.039 0.000  3.496  3.645
+C(year)[T.2006]  0.014    0.006  2.499 0.012  0.003  0.025
+C(year)[T.2016] -0.007    0.006 -1.257 0.209 -0.019  0.004
+netmigpct        0.015    0.004  4.065 0.000  0.008  0.023
+Group Var        0.027    0.015                           
+==========================================================
+"
+Hypothesis-Driven Analyst,oldage_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3516     
+Min. group size:   1898    Log-Likelihood:     -63941.5864
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef. Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       3.551    0.034 104.087 0.000  3.484  3.618
+C(year)[T.2006] 0.044    0.006   6.946 0.000  0.032  0.057
+C(year)[T.2016] 0.011    0.006   1.768 0.077 -0.001  0.023
+wdi_unempilo    0.033    0.004   7.474 0.000  0.024  0.042
+Group Var       0.022    0.012                            
+==========================================================
+"
+Hypothesis-Driven Analyst,oldage_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63963.9469
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.561    0.037 95.304 0.000  3.488  3.634
+C(year)[T.2006]  0.025    0.006  4.314 0.000  0.013  0.036
+C(year)[T.2016]  0.008    0.007  1.130 0.258 -0.006  0.022
+socx_oecd       -0.020    0.006 -3.216 0.001 -0.033 -0.008
+Group Var        0.026    0.015                           
+==========================================================
+"
+Hypothesis-Driven Analyst,oldage_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63966.3106
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.585    0.039 92.051 0.000  3.509  3.661
+C(year)[T.2006] -0.000    0.010 -0.033 0.974 -0.021  0.020
+C(year)[T.2016] -0.038    0.016 -2.399 0.016 -0.070 -0.007
+gdp_oecd         0.019    0.009  2.239 0.025  0.002  0.036
+Group Var        0.027    0.015                           
+==========================================================
+"
+Hypothesis-Driven Analyst,unemp_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6053     
+Min. group size:    1898    Log-Likelihood:     -83297.6625
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.976    0.053  55.643 0.000  2.871  3.081
+C(year)[T.2006] -0.095    0.008 -12.426 0.000 -0.110 -0.080
+C(year)[T.2016] -0.059    0.009  -6.480 0.000 -0.077 -0.041
+migstock_un     -0.063    0.009  -7.331 0.000 -0.080 -0.046
+Group Var        0.054    0.023                            
+===========================================================
+"
+Hypothesis-Driven Analyst,unemp_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6048     
+Min. group size:    1898    Log-Likelihood:     -83269.2316
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.983    0.057  52.467 0.000  2.872  3.095
+C(year)[T.2006] -0.097    0.007 -13.162 0.000 -0.111 -0.082
+C(year)[T.2016] -0.088    0.008 -11.464 0.000 -0.103 -0.073
+netmigpct       -0.052    0.005 -10.567 0.000 -0.062 -0.043
+Group Var        0.061    0.026                            
+===========================================================
+"
+Hypothesis-Driven Analyst,unemp_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6056     
+Min. group size:    1898    Log-Likelihood:     -83321.2904
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.990    0.056  53.047 0.000  2.879  3.100
+C(year)[T.2006] -0.103    0.008 -12.202 0.000 -0.119 -0.086
+C(year)[T.2016] -0.088    0.008 -10.856 0.000 -0.104 -0.072
+wdi_unempilo     0.015    0.006   2.669 0.008  0.004  0.027
+Group Var        0.060    0.026                            
+===========================================================
+"
+Hypothesis-Driven Analyst,unemp_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6049     
+Min. group size:    1898    Log-Likelihood:     -83281.0115
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.975    0.065  45.818 0.000  2.848  3.102
+C(year)[T.2006] -0.094    0.007 -12.644 0.000 -0.109 -0.080
+C(year)[T.2016] -0.046    0.009  -4.938 0.000 -0.064 -0.028
+socx_oecd       -0.078    0.008  -9.317 0.000 -0.094 -0.061
+Group Var        0.079    0.034                            
+===========================================================
+"
+Hypothesis-Driven Analyst,unemp_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: unemp_c    
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.6057     
+Min. group size:   1898    Log-Likelihood:     -83324.0498
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.003    0.059 50.801 0.000  2.887  3.119
+C(year)[T.2006] -0.121    0.014 -8.927 0.000 -0.147 -0.094
+C(year)[T.2016] -0.106    0.021 -5.068 0.000 -0.148 -0.065
+gdp_oecd         0.006    0.011  0.533 0.594 -0.016  0.028
+Group Var        0.064    0.027                           
+==========================================================
+"
+Hypothesis-Driven Analyst,housing_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: housing_c  
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1521     
+Min. group size:    1898    Log-Likelihood:     -34074.7085
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.031    0.016   1.933 0.053 -0.000  0.062
+C(year)[T.2006] -0.025    0.004  -6.513 0.000 -0.033 -0.018
+C(year)[T.2016] -0.061    0.005 -13.075 0.000 -0.070 -0.052
+migstock_un      0.073    0.004  16.384 0.000  0.065  0.082
+Group Var        0.005    0.004                            
+===========================================================
+"
+Hypothesis-Driven Analyst,housing_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34184.0657
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.002  2.310 0.021  0.001  0.010
+C(year)[T.2006] -0.002    0.003 -0.669 0.503 -0.009  0.004
+C(year)[T.2016] -0.017    0.004 -4.585 0.000 -0.024 -0.010
+netmigpct        0.003    0.001  2.611 0.009  0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,housing_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34183.2108
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.004    0.002  1.599 0.110 -0.001  0.009
+C(year)[T.2006]  0.001    0.003  0.268 0.788 -0.006  0.008
+C(year)[T.2016] -0.015    0.004 -3.972 0.000 -0.022 -0.008
+wdi_unempilo     0.004    0.000 12.124 0.000  0.003  0.004
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,housing_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34185.3753
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.003  2.416 0.016  0.001  0.011
+C(year)[T.2006] -0.002    0.004 -0.662 0.508 -0.009  0.005
+C(year)[T.2016] -0.018    0.004 -4.776 0.000 -0.026 -0.011
+socx_oecd        0.002    0.001  1.340 0.180 -0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,housing_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1525     
+Min. group size:   1898    Log-Likelihood:     -34166.3612
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.055    0.011  4.865 0.000  0.033  0.077
+C(year)[T.2006] -0.055    0.007 -7.328 0.000 -0.069 -0.040
+C(year)[T.2016] -0.108    0.012 -9.117 0.000 -0.131 -0.085
+gdp_oecd         0.052    0.006  8.057 0.000  0.039  0.064
+Group Var        0.002    0.002                           
+==========================================================
+"
+Hypothesis-Driven Analyst,health_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0430    
+Min. group size:    1898    Log-Likelihood:     10934.8242
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.012    0.008  1.528 0.127 -0.003  0.026
+C(year)[T.2006] -0.007    0.002 -3.552 0.000 -0.011 -0.003
+C(year)[T.2016] -0.024    0.002 -9.844 0.000 -0.029 -0.020
+migstock_un      0.035    0.002 14.628 0.000  0.030  0.040
+Group Var        0.001    0.002                           
+==========================================================
+"
+Hypothesis-Driven Analyst,health_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0431    
+Min. group size:    1898    Log-Likelihood:     10858.6296
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.001  0.067 0.946 -0.002  0.003
+C(year)[T.2006]  0.003    0.002  1.540 0.124 -0.001  0.006
+C(year)[T.2016] -0.004    0.002 -1.961 0.050 -0.007 -0.000
+netmigpct        0.003                                    
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,health_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10853.2686
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.001    0.001 -0.937 0.349 -0.004  0.001
+C(year)[T.2006]  0.005    0.002  3.028 0.002  0.002  0.009
+C(year)[T.2016] -0.003    0.002 -1.303 0.193 -0.006  0.001
+wdi_unempilo     0.002                                    
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,health_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10848.7946
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.000    0.001 -0.122 0.903 -0.003  0.002
+C(year)[T.2006]  0.004    0.002  1.887 0.059 -0.000  0.007
+C(year)[T.2016] -0.004    0.002 -1.863 0.063 -0.008  0.000
+socx_oecd        0.000    0.001  0.189 0.850 -0.001  0.002
+Group Var        0.000                                    
+==========================================================
+"
+Hypothesis-Driven Analyst,health_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10849.2051
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.002  0.188 0.851 -0.003  0.003
+C(year)[T.2006]  0.003    0.002  1.423 0.155 -0.001  0.007
+C(year)[T.2016] -0.005    0.003 -1.812 0.070 -0.010  0.000
+gdp_oecd         0.001    0.001  0.594 0.552 -0.001  0.003
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,incdiff_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8475     
+Min. group size:   1898    Log-Likelihood:     -95290.8166
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.891    0.057 50.632 0.000  2.779  3.003
+C(year)[T.2006]  0.108    0.009 11.940 0.000  0.090  0.125
+C(year)[T.2016]  0.196    0.011 18.172 0.000  0.175  0.217
+migstock_un     -0.073    0.010 -7.210 0.000 -0.093 -0.053
+Group Var        0.061    0.022                           
+==========================================================
+"
+Empirical Skeptic,incdiff_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8474     
+Min. group size:   1898    Log-Likelihood:     -95288.7497
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.904    0.060 48.657 0.000  2.787  3.021
+C(year)[T.2006]  0.100    0.009 11.522 0.000  0.083  0.117
+C(year)[T.2016]  0.160    0.009 17.655 0.000  0.143  0.178
+netmigpct       -0.044    0.006 -7.554 0.000 -0.056 -0.033
+Group Var        0.067    0.024                           
+==========================================================
+"
+Empirical Skeptic,incdiff_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+=========================================================
+Model:            MixedLM Dependent Variable: incdiff_c  
+No. Observations: 71266   Method:             REML       
+No. Groups:       19      Scale:              0.8481     
+Min. group size:  1898    Log-Likelihood:     -95317.0981
+Max. group size:  7597    Converged:          Yes        
+Mean group size:  3750.8                                 
+---------------------------------------------------------
+                Coef. Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------
+Intercept       2.916    0.063 46.458 0.000  2.793  3.039
+C(year)[T.2006] 0.085    0.010  8.566 0.000  0.066  0.105
+C(year)[T.2016] 0.154    0.010 15.967 0.000  0.135  0.173
+wdi_unempilo    0.000    0.007  0.066 0.947 -0.013  0.014
+Group Var       0.074    0.027                           
+=========================================================
+"
+Empirical Skeptic,incdiff_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.7381
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.916    0.063 46.408 0.000  2.792  3.039
+C(year)[T.2006]  0.085    0.009  9.640 0.000  0.068  0.102
+C(year)[T.2016]  0.154    0.011 13.989 0.000  0.133  0.176
+socx_oecd       -0.001    0.010 -0.085 0.932 -0.020  0.018
+Group Var        0.074    0.027                           
+==========================================================
+"
+Empirical Skeptic,incdiff_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: incdiff_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.8481     
+Min. group size:   1898    Log-Likelihood:     -95316.0883
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        2.905    0.063 46.169 0.000  2.782  3.028
+C(year)[T.2006]  0.096    0.016  6.009 0.000  0.065  0.128
+C(year)[T.2016]  0.173    0.025  6.947 0.000  0.124  0.222
+gdp_oecd        -0.011    0.013 -0.841 0.401 -0.037  0.015
+Group Var        0.071    0.026                           
+==========================================================
+"
+Empirical Skeptic,jobs_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1971     
+Min. group size:    1898    Log-Likelihood:     -43302.3828
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.062    0.013   4.907 0.000  0.037  0.087
+C(year)[T.2006] -0.069    0.004 -15.688 0.000 -0.078 -0.060
+C(year)[T.2016] -0.116    0.005 -21.702 0.000 -0.127 -0.106
+migstock_un      0.052    0.005   9.924 0.000  0.042  0.063
+Group Var        0.003    0.002                            
+===========================================================
+"
+Empirical Skeptic,jobs_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43347.0851
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.042    0.003  12.047 0.000  0.035  0.048
+C(year)[T.2006] -0.050    0.004 -11.735 0.000 -0.058 -0.042
+C(year)[T.2016] -0.082    0.005 -17.753 0.000 -0.091 -0.073
+netmigpct       -0.000    0.002  -0.026 0.979 -0.004  0.004
+Group Var        0.000    0.000                            
+===========================================================
+"
+Empirical Skeptic,jobs_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1973     
+Min. group size:    1898    Log-Likelihood:     -43327.3357
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.035    0.005   6.423 0.000  0.024  0.045
+C(year)[T.2006] -0.037    0.005  -7.837 0.000 -0.047 -0.028
+C(year)[T.2016] -0.075    0.005 -16.502 0.000 -0.084 -0.066
+wdi_unempilo     0.020    0.003   5.690 0.000  0.013  0.027
+Group Var        0.000    0.000                            
+===========================================================
+"
+Empirical Skeptic,jobs_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: jobs_c     
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1975     
+Min. group size:    1898    Log-Likelihood:     -43344.5232
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.044    0.004  12.242 0.000  0.037  0.050
+C(year)[T.2006] -0.052    0.004 -12.198 0.000 -0.060 -0.043
+C(year)[T.2016] -0.085    0.005 -17.169 0.000 -0.095 -0.076
+socx_oecd        0.005    0.002   2.072 0.038  0.000  0.010
+Group Var        0.000    0.000                            
+===========================================================
+"
+Empirical Skeptic,jobs_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: jobs_c     
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1973     
+Min. group size:   1898    Log-Likelihood:     -43331.8197
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.010    0.010  0.945 0.345 -0.010  0.030
+C(year)[T.2006] -0.016    0.009 -1.757 0.079 -0.033  0.002
+C(year)[T.2016] -0.022    0.014 -1.574 0.116 -0.050  0.005
+gdp_oecd        -0.037    0.008 -4.670 0.000 -0.052 -0.021
+Group Var        0.001    0.001                           
+==========================================================
+"
+Empirical Skeptic,oldage_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: oldage_c   
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.3502     
+Min. group size:    1898    Log-Likelihood:     -63811.4652
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        3.607    0.053  67.583 0.000  3.502  3.711
+C(year)[T.2006] -0.017    0.006  -3.006 0.003 -0.029 -0.006
+C(year)[T.2016] -0.073    0.007 -10.530 0.000 -0.087 -0.060
+migstock_un      0.117    0.007  17.749 0.000  0.104  0.130
+Group Var        0.054    0.031                            
+===========================================================
+"
+Empirical Skeptic,oldage_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63961.3730
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.571    0.038 94.039 0.000  3.496  3.645
+C(year)[T.2006]  0.014    0.006  2.499 0.012  0.003  0.025
+C(year)[T.2016] -0.007    0.006 -1.257 0.209 -0.019  0.004
+netmigpct        0.015    0.004  4.065 0.000  0.008  0.023
+Group Var        0.027    0.015                           
+==========================================================
+"
+Empirical Skeptic,oldage_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3516     
+Min. group size:   1898    Log-Likelihood:     -63941.5864
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef. Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       3.551    0.034 104.087 0.000  3.484  3.618
+C(year)[T.2006] 0.044    0.006   6.946 0.000  0.032  0.057
+C(year)[T.2016] 0.011    0.006   1.768 0.077 -0.001  0.023
+wdi_unempilo    0.033    0.004   7.474 0.000  0.024  0.042
+Group Var       0.022    0.012                            
+==========================================================
+"
+Empirical Skeptic,oldage_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63963.9469
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.561    0.037 95.304 0.000  3.488  3.634
+C(year)[T.2006]  0.025    0.006  4.314 0.000  0.013  0.036
+C(year)[T.2016]  0.008    0.007  1.130 0.258 -0.006  0.022
+socx_oecd       -0.020    0.006 -3.216 0.001 -0.033 -0.008
+Group Var        0.026    0.015                           
+==========================================================
+"
+Empirical Skeptic,oldage_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: oldage_c   
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.3518     
+Min. group size:   1898    Log-Likelihood:     -63966.3106
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.585    0.039 92.051 0.000  3.509  3.661
+C(year)[T.2006] -0.000    0.010 -0.033 0.974 -0.021  0.020
+C(year)[T.2016] -0.038    0.016 -2.399 0.016 -0.070 -0.007
+gdp_oecd         0.019    0.009  2.239 0.025  0.002  0.036
+Group Var        0.027    0.015                           
+==========================================================
+"
+Empirical Skeptic,unemp_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6053     
+Min. group size:    1898    Log-Likelihood:     -83297.6625
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.976    0.053  55.643 0.000  2.871  3.081
+C(year)[T.2006] -0.095    0.008 -12.426 0.000 -0.110 -0.080
+C(year)[T.2016] -0.059    0.009  -6.480 0.000 -0.077 -0.041
+migstock_un     -0.063    0.009  -7.331 0.000 -0.080 -0.046
+Group Var        0.054    0.023                            
+===========================================================
+"
+Empirical Skeptic,unemp_c,netmigpct,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6048     
+Min. group size:    1898    Log-Likelihood:     -83269.2316
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.983    0.057  52.467 0.000  2.872  3.095
+C(year)[T.2006] -0.097    0.007 -13.162 0.000 -0.111 -0.082
+C(year)[T.2016] -0.088    0.008 -11.464 0.000 -0.103 -0.073
+netmigpct       -0.052    0.005 -10.567 0.000 -0.062 -0.043
+Group Var        0.061    0.026                            
+===========================================================
+"
+Empirical Skeptic,unemp_c,wdi_unempilo,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6056     
+Min. group size:    1898    Log-Likelihood:     -83321.2904
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.990    0.056  53.047 0.000  2.879  3.100
+C(year)[T.2006] -0.103    0.008 -12.202 0.000 -0.119 -0.086
+C(year)[T.2016] -0.088    0.008 -10.856 0.000 -0.104 -0.072
+wdi_unempilo     0.015    0.006   2.669 0.008  0.004  0.027
+Group Var        0.060    0.026                            
+===========================================================
+"
+Empirical Skeptic,unemp_c,socx_oecd,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: unemp_c    
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.6049     
+Min. group size:    1898    Log-Likelihood:     -83281.0115
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        2.975    0.065  45.818 0.000  2.848  3.102
+C(year)[T.2006] -0.094    0.007 -12.644 0.000 -0.109 -0.080
+C(year)[T.2016] -0.046    0.009  -4.938 0.000 -0.064 -0.028
+socx_oecd       -0.078    0.008  -9.317 0.000 -0.094 -0.061
+Group Var        0.079    0.034                            
+===========================================================
+"
+Empirical Skeptic,unemp_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: unemp_c    
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.6057     
+Min. group size:   1898    Log-Likelihood:     -83324.0498
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        3.003    0.059 50.801 0.000  2.887  3.119
+C(year)[T.2006] -0.121    0.014 -8.927 0.000 -0.147 -0.094
+C(year)[T.2016] -0.106    0.021 -5.068 0.000 -0.148 -0.065
+gdp_oecd         0.006    0.011  0.533 0.594 -0.016  0.028
+Group Var        0.064    0.027                           
+==========================================================
+"
+Empirical Skeptic,housing_c,migstock_un,,,,"           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM Dependent Variable: housing_c  
+No. Observations:   71266   Method:             REML       
+No. Groups:         19      Scale:              0.1521     
+Min. group size:    1898    Log-Likelihood:     -34074.7085
+Max. group size:    7597    Converged:          Yes        
+Mean group size:    3750.8                                 
+-----------------------------------------------------------
+                Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept        0.031    0.016   1.933 0.053 -0.000  0.062
+C(year)[T.2006] -0.025    0.004  -6.513 0.000 -0.033 -0.018
+C(year)[T.2016] -0.061    0.005 -13.075 0.000 -0.070 -0.052
+migstock_un      0.073    0.004  16.384 0.000  0.065  0.082
+Group Var        0.005    0.004                            
+===========================================================
+"
+Empirical Skeptic,housing_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34184.0657
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.002  2.310 0.021  0.001  0.010
+C(year)[T.2006] -0.002    0.003 -0.669 0.503 -0.009  0.004
+C(year)[T.2016] -0.017    0.004 -4.585 0.000 -0.024 -0.010
+netmigpct        0.003    0.001  2.611 0.009  0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,housing_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34183.2108
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.004    0.002  1.599 0.110 -0.001  0.009
+C(year)[T.2006]  0.001    0.003  0.268 0.788 -0.006  0.008
+C(year)[T.2016] -0.015    0.004 -3.972 0.000 -0.022 -0.008
+wdi_unempilo     0.004    0.000 12.124 0.000  0.003  0.004
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,housing_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1527     
+Min. group size:   1898    Log-Likelihood:     -34185.3753
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.006    0.003  2.416 0.016  0.001  0.011
+C(year)[T.2006] -0.002    0.004 -0.662 0.508 -0.009  0.005
+C(year)[T.2016] -0.018    0.004 -4.776 0.000 -0.026 -0.011
+socx_oecd        0.002    0.001  1.340 0.180 -0.001  0.005
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,housing_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:             MixedLM Dependent Variable: housing_c  
+No. Observations:  71266   Method:             REML       
+No. Groups:        19      Scale:              0.1525     
+Min. group size:   1898    Log-Likelihood:     -34166.3612
+Max. group size:   7597    Converged:          Yes        
+Mean group size:   3750.8                                 
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.055    0.011  4.865 0.000  0.033  0.077
+C(year)[T.2006] -0.055    0.007 -7.328 0.000 -0.069 -0.040
+C(year)[T.2016] -0.108    0.012 -9.117 0.000 -0.131 -0.085
+gdp_oecd         0.052    0.006  8.057 0.000  0.039  0.064
+Group Var        0.002    0.002                           
+==========================================================
+"
+Empirical Skeptic,health_c,migstock_un,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0430    
+Min. group size:    1898    Log-Likelihood:     10934.8242
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.012    0.008  1.528 0.127 -0.003  0.026
+C(year)[T.2006] -0.007    0.002 -3.552 0.000 -0.011 -0.003
+C(year)[T.2016] -0.024    0.002 -9.844 0.000 -0.029 -0.020
+migstock_un      0.035    0.002 14.628 0.000  0.030  0.040
+Group Var        0.001    0.002                           
+==========================================================
+"
+Empirical Skeptic,health_c,netmigpct,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0431    
+Min. group size:    1898    Log-Likelihood:     10858.6296
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.001  0.067 0.946 -0.002  0.003
+C(year)[T.2006]  0.003    0.002  1.540 0.124 -0.001  0.006
+C(year)[T.2016] -0.004    0.002 -1.961 0.050 -0.007 -0.000
+netmigpct        0.003                                    
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,health_c,wdi_unempilo,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10853.2686
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.001    0.001 -0.937 0.349 -0.004  0.001
+C(year)[T.2006]  0.005    0.002  3.028 0.002  0.002  0.009
+C(year)[T.2016] -0.003    0.002 -1.303 0.193 -0.006  0.001
+wdi_unempilo     0.002                                    
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,health_c,socx_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10848.7946
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept       -0.000    0.001 -0.122 0.903 -0.003  0.002
+C(year)[T.2006]  0.004    0.002  1.887 0.059 -0.000  0.007
+C(year)[T.2016] -0.004    0.002 -1.863 0.063 -0.008  0.000
+socx_oecd        0.000    0.001  0.189 0.850 -0.001  0.002
+Group Var        0.000                                    
+==========================================================
+"
+Empirical Skeptic,health_c,gdp_oecd,,,,"          Mixed Linear Model Regression Results
+==========================================================
+Model:              MixedLM Dependent Variable: health_c  
+No. Observations:   71266   Method:             REML      
+No. Groups:         19      Scale:              0.0432    
+Min. group size:    1898    Log-Likelihood:     10849.2051
+Max. group size:    7597    Converged:          Yes       
+Mean group size:    3750.8                                
+----------------------------------------------------------
+                Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+----------------------------------------------------------
+Intercept        0.000    0.002  0.188 0.851 -0.003  0.003
+C(year)[T.2006]  0.003    0.002  1.423 0.155 -0.001  0.007
+C(year)[T.2016] -0.005    0.003 -1.812 0.070 -0.010  0.000
+gdp_oecd         0.001    0.001  0.594 0.552 -0.001  0.003
+Group Var        0.000                                    
+==========================================================
+"

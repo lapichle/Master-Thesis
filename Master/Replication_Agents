@@ -1,0 +1,221 @@
+# Considering the original code Breznau et. al used at their study 
+
+import pandas as pd
+import statsmodels.formula.api as smf
+import random
+
+# Load the dataset
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/processed_dataset2.csv'  
+data = pd.read_csv(file_path)
+
+"""
+There were some  warnings which indicate that some of the mixed effects models failed to converge during the optimization process
+I tried to change the optimizer, which did not do a lot into cg ("Conjugate Gradient")
+2nd option is to standardize my variables 
+The new model fiting gave me back other errors 
+MLE Boundary Issue: The parameter estimates (e.g., random effects variances) are close to zero or on the boundary of the parameter space which suggests limited variability or difficulty in estimating certain parameters
+Hessian Not Positive Defi nite: Indicates numerical instability, which can occur when the model is overparameterized, collinearity exists, or the random effects structure is too complex
+Let's try to fix this
+
+"""
+
+# Define dependent variables
+dvs_c = ["incdiff_c", "jobs_c", "oldage_c", "unemp_c", "housing_c", "health_c"]
+
+# Define independent variables
+ivs = ["migstock_un", "netmigpct", "wdi_unempilo", "socx_oecd", "gdp_oecd"]
+
+# Define control variables
+controls = ["female", "age", "age_sq", "education", "income"]
+
+# Define persona agent preferences
+persona_preferences = {
+    "Statistical Purist": {
+        "model_type": "linear",  # Prefer simple OLS
+        "include_controls": True,
+        "transformations": None,
+    },
+    "Social Scientist": {
+        "model_type": "multilevel",  # Use multilevel models
+        "include_controls": True,
+        "transformations": None,
+    },
+    "Innovative Modeler": {
+        "model_type": "multilevel",
+        "include_controls": True,
+        "transformations": ["zscore"],  # Use standardized variables
+    },
+    "Hypothesis-Driven Analyst": {
+        "model_type": "linear",
+        "include_controls": False,  # No controls, hypothesis-driven focus
+        "transformations": None,
+    },
+    "Empirical Skeptic": {
+        "model_type": "linear",
+        "include_controls": True,
+        "transformations": None,
+    },
+}
+
+# Function to preprocess data based on persona preferences
+def preprocess_data(persona, data, transformations):
+    if transformations == "zscore":
+        cols_to_transform = [col for col in data.columns if "_zscore" in col]
+        return data[cols_to_transform]
+    return data  
+
+# Check group sizes
+group_sizes = data["iso_country"].value_counts()
+print(group_sizes)
+
+# Exclude groups with too few observations (e.g., fewer than 5)
+valid_groups = group_sizes[group_sizes >= 5].index
+data_filtered = data[data["iso_country"].isin(valid_groups)]
+
+from sklearn.preprocessing import StandardScaler
+
+# Standardize all numeric predictors
+numeric_cols = ["migstock_un", "netmigpct", "wdi_unempilo", "socx_oecd", "gdp_oecd", "female", "age", "age_sq", "education", "income"]
+scaler = StandardScaler()
+data_filtered[numeric_cols] = scaler.fit_transform(data_filtered[numeric_cols])
+
+# Exclude groups with too few observations (e.g., fewer than 5)
+group_sizes = data_filtered["iso_country"].value_counts()
+valid_groups = group_sizes[group_sizes >= 5].index
+data_filtered = data_filtered[data_filtered["iso_country"].isin(valid_groups)]
+
+# Check for Multicollinearity
+
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+X = data_filtered[ivs + controls]
+vif_data = pd.DataFrame()
+vif_data["feature"] = X.columns
+vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+print(vif_data)
+
+# age, age_sq have a VIF - consider removing or combining them 
+
+import statsmodels.api as sm
+
+# List of dependent variables
+dependent_variables = dvs_c 
+
+# Initialize a results container
+significance_results = []
+
+for dv in dependent_variables:
+    # Define the independent variables
+    X = sm.add_constant(data_filtered[["age", "age_sq"]])
+    y = data_filtered[dv]
+    
+    # Fit the OLS model
+    model = sm.OLS(y, X).fit()
+    
+    # Store significance results
+    significance_results.append({
+        "Dependent Variable": dv,
+        "p_value_age": model.pvalues["age"],
+        "p_value_age_sq": model.pvalues["age_sq"],
+        "R-squared": model.rsquared,
+    })
+
+# Convert results to a DataFrame for better visualization
+significance_df = pd.DataFrame(significance_results)
+
+print(significance_df)
+
+# all the p-values are low, suggesting I am going to keep them both and try to combine them with a polynomial transformation 
+
+# Store results
+results = []
+
+# Perform analysis for each persona agent
+for persona, prefs in persona_preferences.items():
+    for dv in dvs_c:
+        for iv in ivs:
+            formula = f"{dv} ~ {iv} + C(year)"  # Fixed-effects formula
+            try:
+                # Define the mixed-effects model
+                model = smf.mixedlm(formula, data=data_filtered, groups=data_filtered["iso_country"], re_formula="~1")
+                
+                # Fit the model with REML
+                result_reml = model.fit(reml=True, method="powell", maxiter=2000, tol=1e-4)
+                print(f"[{persona}] REML Fit Results for DV: {dv}, IV: {iv}")
+                print(result_reml.summary())
+                
+                # Fit the model with ML
+                result_ml = model.fit(reml=False, method="powell", maxiter=2000, tol=1e-4)
+                print(f"[{persona}] ML Fit Results for DV: {dv}, IV: {iv}")
+                print(result_ml.summary())
+                
+                # Store results
+                results.append({
+                    "persona": persona,
+                    "dependent_variable": dv,
+                    "independent_variable": iv,
+                    "aic_reml": result_reml.aic,
+                    "bic_reml": result_reml.bic,
+                    "aic_ml": result_ml.aic,
+                    "bic_ml": result_ml.bic,
+                    "random_effects_var_reml": getattr(result_reml, "random_effects_var", None),
+                    "random_effects_var_ml": getattr(result_ml, "random_effects_var", None),
+                })
+            except Exception as e:
+                print(f"[{persona}] Error with DV: {dv}, IV: {iv}: {e}")
+
+# Save results to CSV
+#results_df = pd.DataFrame(results)
+#results_df.to_csv("/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/persona_agent_results_fixed.csv", index=False)
+#print("Analysis is complete. Results were saved to 'persona_agent_results_fixed.csv'.")
+
+# Convert results to a DataFrame
+results_df = pd.DataFrame(results)
+
+# Save results to CSV
+results_df.to_csv("/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/persona_agent_results_reml_ml.csv", index=False)
+print("Analysis complete. Results saved to 'persona_agent_results_reml_ml.csv'.")
+
+# Print summary of AIC/BIC differences
+print("Comparison of AIC/BIC between REML and ML:")
+print(results_df[["persona", "dependent_variable", "independent_variable", "aic_reml", "aic_ml", "bic_reml", "bic_ml"]])
+
+
+
+
+
+
+#just explain the outline form 
+# figure with results - figure with the algorithm
+# flowchart - description of the algorithm 
+# alternatives
+# bayesian sample modeling - foresting trees
+# talking about how they average 
+# density plots
+# point estimates and t statistics
+
+
+
+## Linear Regression 
+## Logistic Regression 
+## Hierarchial Linear Model 
+## Generalized Linear Model
+## Bayesian Regression 
+## Machine Learning
+## Basic Multilevel Model 
+
+## adding a step that adds more uncertainty - bigger standard errors 
+## What sort of prompting gives me the level of uncertainty that the paper gave 
+
+
+## t - statistics, se, p values 
+## math to measure the correlation between the personas 
+## put in on hugging face in the end 
+## github commits, mergers 
+## adding a step that adds more uncertainty - bigger standard errors 
+## What sort of prompting gives me the level of uncertainty that the paper gave 
+## different models, creating 5 pages with the results 
+## using a different dataset - school shooting 
+## ensample methods 
+
+#Testing for robustness 

@@ -1,0 +1,158 @@
+#Provided data to the researcher
+# Which data did the researchers use, which data would you recommend for the persona agents i
+# in order to get similar results
+# teams used different subsets of the data, was hard to compare data - not all teams used all waves, some did not use all the waves, majority used 1996 and 2006 data 
+# well i had to constrain this, talked to primare researcher 
+# get the IISP data and put together for themselves 
+# could use a provided data, they used, they took it from one of the teams 
+# did they use all the provided data, did they cleaned them individually?
+# where can i find your analysis part? 
+# what you did with the data of the researchers 
+# Identify key variables analyzed by the persona agents 
+# code - multiverse - nr 6 CRI-Mulitverse: team18
+# paper under the review of - ideology 
+# people who are more anti 
+# people who are more positive with immigration - biased prior depends on the pos/neg beliefs they had prior
+# sent me the survey data 
+# models nested in teams, teams nested the individuals 
+# robustness check with the help of the data of teams as individuals - some specifications
+# dyatic data - links person to each model they created - citing
+
+# Let's load the dataset and examine it to provide a suitable cleaning script
+import pandas as pd
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/df.csv'
+df = pd.read_csv(file_path)
+
+#df.info() 
+print(df.head())
+
+# Handle Missing Values
+# Drop columns with too many missing values or fill them with appropriate values.
+threshold = 0.1  # If more than 10% of the values are missing, drop the column
+
+# Fill remaining missing values with median for numeric or mode for categorical
+for column in df.columns:
+    if df[column].dtype in ['int64', 'float64']:
+        df[column].fillna(df[column].median(), inplace=True)
+    else:
+        df[column].fillna(df[column].mode()[0], inplace=True)
+
+# Remove Duplicates
+df.drop_duplicates(inplace=True)
+
+# Standardizing Column Names
+df.columns = [col.strip().lower().replace(' ', '_') for col in df.columns]
+
+# Handle Inconsistent Data Types
+# Convert object columns with numeric-like values to numeric type
+for column in df.columns:
+    if df[column].dtype == 'object':
+        try:
+            df[column] = pd.to_numeric(df[column])
+        except ValueError:
+            pass  
+
+# Handling Categorical Variables for LLM
+
+# Converting categorical columns to string type
+for column in df.columns:
+    if df[column].dtype == 'object':
+            df[column] = df[column].astype(str)
+
+# Saving the Cleaned Dataset to a New CSV
+output_file_path = "/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/cleaned_df.csv"
+df.to_csv(output_file_path, index=False)
+
+output_file_path
+
+"""
+This data contains the the csv-file a team used for their analysis, they used the data from team 18
+which included only 3 waves of the ISS-Data (1996,2006 & 2016)
+Their DV is dichotomized, the has pluses and minuses in our multiverse analysis.
+The analysis part, Breznau conducted had 2 purposes:
+The first is to determine how much variance we should reasonably expect to explain using a 'static' multiverse approach where we use a single worked up data set from one of the teams and then apply a range of possible model specifications to it. Then we predict the outcomes using the model specifications. 
+The second is to run an algorithmic analysis of the real data and real model specifications to see if we 'missed' anything or combinations of things that could explain the outcomes.
+"""
+
+## Data Preprocessing 
+
+import pandas as pd
+
+# Load the dataset
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/cleaned_df.csv'  
+df = pd.read_csv(file_path)
+
+# Preprocessing 
+# Step 1: Separate Numeric Columns and Non-Numeric Columns
+numeric_cols = df.select_dtypes(include=['number']).columns
+non_numeric_cols = df.select_dtypes(exclude=['number']).columns
+
+# Print non-numeric columns to inspect their values and understand the data types
+print("Non-numeric columns:")
+for col in non_numeric_cols:
+    print(f"{col} unique values: {df[col].unique()[:10]}")  # Print only the first 10 unique values for brevity
+
+# Step 2: Handle missing values only in numeric columns
+df[numeric_cols] = df[numeric_cols].fillna(df[numeric_cols].mean())
+
+# Label Coding - the education variable - coded them in dummy-variables - 0 always = Primary or less 
+# education_1 = University or more 
+# education_2 = Secondary
+
+
+df['education'] = pd.factorize(df['education'])[0]
+
+# Step 3: Convert numeric-like strings in specific columns to numeric
+# If there are columns that look like they should be numeric but are currently strings, attempt conversion
+for col in non_numeric_cols:
+    try:
+        # Attempt to convert to numeric if the column appears to be numeric
+        df[col] = pd.to_numeric(df[col], errors='raise')
+        print(f"Converted {col} to numeric.")
+    except ValueError:
+        print(f"Column '{col}' could not be converted to numeric. Keeping it as non-numeric.")
+
+# Step 4: Handle non-numeric columns that need encoding
+# For categorical data, use one-hot encoding or other transformation methods as needed
+# df = pd.get_dummies(df, columns=non_numeric_cols, drop_first=True)
+
+df.info()
+
+# Independent Variables: Standardize immigration measures (stock and flow)
+immigration_vars = ['migstock_un', 'netmigpct']  
+for var in immigration_vars:
+    if var in df.columns:
+        # Standardizing immigration variables using z-score normalization
+        df[var + '_zscore'] = (df[var] - df[var].mean()) / df[var].std()
+
+# Dependent Variables: Process social policy support measures
+# Assuming we want to use both single items and country-centered versions
+dependent_vars = ['reduce_income_diff', 'jobs', 'old_age_care', 'unemployed', 'housing', 'health']
+dependent_vars_centered = ['incdiff_c', 'jobs_c', 'oldage_c', 'unemp_c', 'housing_c', 'health_c']
+
+# Handle Country-Centered Variables
+# For country-centered variables, confirm that centering is consistent and that the base column exists
+country_columns = [col for col in df.columns if col.endswith('_c')]
+
+for col in country_columns:
+    # Remove '_c' suffix to get the base column name
+    country_col = col[:-2]
+    
+    # Check if the base column exists in the dataset
+    if country_col in df.columns:
+        # Calculate mean-centered values within each country group
+        df[col] = df.groupby('iso_country')[country_col].transform(lambda x: x - x.mean())
+    else:
+        print(f"Base column '{country_col}' for '{col}' not found. Skipping transformation for '{col}'.")
+
+# Control Variables
+control_vars = ['female', 'age', 'age_sq', 'education', 'income', 'wdi_unempilo', 'socx_oecd', 'gdp_oecd']
+for var in control_vars:
+    if var in df.columns:
+        df[var + '_zscore'] = (df[var] - df[var].mean()) / df[var].std()
+
+cleaned_path = 'processed_dataset2.csv'
+df.to_csv(cleaned_path, index=False)
+print(f"Processed dataset saved to {cleaned_path}")
+
+

@@ -1,0 +1,169 @@
+import pandas as pd
+import numpy as np
+import random
+from statsmodels.formula.api import ols
+from sklearn.preprocessing import StandardScaler, PolynomialFeatures
+from sklearn.decomposition import PCA
+from statsmodels.api import OLS
+from statsmodels.tools.tools import add_constant
+
+# Load the dataset
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Data/cleaned_research_data.csv'
+data = pd.read_csv(file_path)
+
+def assign_persona(row):
+    degree = row['backgr_degree']
+    teaching_exp = row['backgr_exp_teach_stat']
+    belief_certainty = row[['belief_certainty_1', 'belief_certainty_2', 'belief_certainty_3']].mean()
+    interest = row.get('v_88', 0)
+    time_constraint = row.get('v_98', 0)
+
+    if degree == 7 or (teaching_exp >= 8 and belief_certainty <= 3):
+        return "Innovative Modeler"
+    elif degree == 2 and teaching_exp >= 7 and belief_certainty >= 5 and interest > 0.5:
+        return "Statistical Purist"
+    elif degree in [3, 4] and teaching_exp <= 4 and 2 <= belief_certainty <= 4:
+        return "Social Scientist"
+    elif degree in [2, 3] and belief_certainty >= 4 and teaching_exp >= 5:
+        return "Hypothesis-Driven Analyst"
+    elif degree in [4] and belief_certainty <= 3 and (time_constraint >= 2 or teaching_exp <= 5):
+        return "Empirical Skeptic"
+    else:
+        return "Other"
+
+# Apply persona assignment
+data['persona'] = data.apply(assign_persona, axis=1)
+print(data['persona'].value_counts())
+
+persona_model_criteria = {
+    "Statistical Purist": {
+        "model_types": ["linear_regression"],
+        "complexity_preference": "simple",
+        "data_handling": {
+            "handle_missing": "mean_imputation",
+            "transformations": ["log"],
+            "outlier_handling": "remove_outliers",
+            "interactions": ["wdi_unempilo:socx_oecd"]
+        }
+    },
+    "Social Scientist": {
+        "model_types": ["hierarchical_linear_model"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "multiple_imputation",
+            "transformations": ["zscore"],
+            "outlier_handling": "cap_outliers",
+            "interactions": ["netmigpct:education"]
+        }
+    },
+    "Innovative Modeler": {
+        "model_types": ["machine_learning"],
+        "complexity_preference": "complex",
+        "data_handling": {
+            "handle_missing": "predictive_imputation",
+            "transformations": ["scaling", "PCA"],
+            "outlier_handling": "retain_outliers",
+            "interactions": ["migstock_un:income"]
+        }
+    },
+    "Hypothesis-Driven Analyst": {
+        "model_types": ["logistic_regression"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["standardization", "polynomial"],
+            "outlier_handling": "remove_outliers",
+            "interactions": ["wdi_unempilo:netmigpct"]
+        }
+    },
+    "Empirical Skeptic": {
+        "model_types": ["linear_regression"],
+        "complexity_preference": "low",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["none"],
+            "outlier_handling": "cap_outliers",
+            "interactions": ["jobs_c:income"]
+        }
+    }
+}
+
+# Persona Agent Class
+class PersonaAgent:
+    def __init__(self, persona_type):
+        self.persona_type = persona_type
+        self.guidelines = persona_model_criteria.get(persona_type, {})
+
+    def preprocess_data(self, dataset):
+        data_handling = self.guidelines.get("data_handling", {})
+        numeric_cols = dataset.select_dtypes(include=['number']).columns
+
+        if data_handling["handle_missing"] == "mean_imputation":
+            dataset[numeric_cols] = dataset[numeric_cols].fillna(dataset[numeric_cols].mean())
+        elif data_handling["handle_missing"] == "listwise_deletion":
+            dataset.dropna(inplace=True)
+
+        if data_handling["outlier_handling"] == "remove_outliers":
+            dataset = dataset[(np.abs(dataset[numeric_cols] - dataset[numeric_cols].mean()) <= (3 * dataset[numeric_cols].std())).all(axis=1)]
+        elif data_handling["outlier_handling"] == "cap_outliers":
+            dataset[numeric_cols] = dataset[numeric_cols].clip(lower=dataset[numeric_cols].quantile(0.05), upper=dataset[numeric_cols].quantile(0.95))
+
+        if "log" in data_handling["transformations"]:
+            dataset[numeric_cols] = dataset[numeric_cols].applymap(lambda x: np.log(x + 1) if x > 0 else 0)
+        if "zscore" in data_handling["transformations"]:
+            dataset[numeric_cols] = dataset[numeric_cols].apply(lambda x: (x - x.mean()) / x.std())
+        if "scaling" in data_handling["transformations"]:
+            scaler = StandardScaler()
+            dataset[numeric_cols] = scaler.fit_transform(dataset[numeric_cols])
+
+        for interaction in data_handling.get("interactions", []):
+            var1, var2 = interaction.split(":")
+            if var1 in dataset.columns and var2 in dataset.columns:
+                dataset[f"{var1}*{var2}"] = dataset[var1] * dataset[var2]
+
+        return dataset
+
+    def analyze_data(self, dataset):
+        try:
+            y = dataset[random.choice(dvs_c)]
+            X = dataset[ivs]
+            X = add_constant(X)
+            model = OLS(y, X).fit()
+            beta = model.params[1]
+            result = {
+                "model": "OLS",
+                "complexity": self.guidelines.get("complexity_preference", "unknown"),
+                "AIC": model.aic,
+                "BIC": model.bic,
+                "parameter_estimates": {"beta": beta}
+            }
+        except Exception as e:
+            result = {
+                "model": "OLS",
+                "complexity": self.guidelines.get("complexity_preference", "unknown"),
+                "parameter_estimates": {"beta": np.nan}
+            }
+
+        return result
+
+
+
+
+
+
+
+
+
+
+# Variance Decomposition
+results_breznau = pd.read_csv('/Users/laurapichler/Desktop/Repository/Master-Thesis/Results/total_variance_persona_multiverse_results_updated.csv')
+persona_variance = results_breznau.groupby('persona')['beta'].var().mean()
+model_variance = results_breznau.groupby(['persona', 'specification'])['beta'].var().mean()
+total_variance = results_breznau['beta'].var()
+explained_variance = persona_variance + model_variance
+unexplained_variance = total_variance - explained_variance
+
+print(f"Total Variance: {total_variance}")
+print(f"Persona-Level Variance: {persona_variance}")
+print(f"Model-Level Variance: {model_variance}")
+print(f"Unexplained Variance: {unexplained_variance}")

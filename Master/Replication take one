@@ -1,0 +1,379 @@
+'''
+Replicating the Study of Breznau using the Persona Agents 
+'''
+import pandas as pd
+import statsmodels.formula.api as smf
+import random
+import pandas as pd 
+import numpy as np 
+import random
+import json 
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+# Loading the CSV file
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Data/cleaned_research_data.csv' 
+data = pd.read_csv(file_path)
+
+def assign_persona(row):
+
+    # Retrieving values for relevant columns
+    degree = row['backgr_degree']
+    teaching_exp = row['backgr_exp_teach_stat']
+    belief_certainty = row[['belief_certainty_1', 'belief_certainty_2', 'belief_certainty_3']].mean()
+    interest = row.get('v_88', 0)  # Interest in project, if available
+    time_constraint = row.get('v_98', 0)  # Time constraint, if available
+
+    # Refining conditions for each persona type
+    if degree == 7 or (teaching_exp >= 8 and belief_certainty <= 3):
+        return "Innovative Modeler"  # Highly method-focused or experimental preference
+
+    elif degree == 2 and teaching_exp >= 7 and belief_certainty >= 5:
+        return "Statistical Purist"  # Strong statistical expertise and confidence
+
+    elif degree in [3, 4] and teaching_exp <= 4 and 2 <= belief_certainty <= 4:
+        return "Social Scientist"  # Sociological/political focus with moderate certainty
+
+    elif degree in [2, 3] and belief_certainty >= 4 and teaching_exp >= 5:
+        return "Hypothesis-Driven Analyst"  # High belief certainty, likely hypothesis-driven
+
+    elif degree in [4] and belief_certainty <= 3 and (time_constraint >= 2 or teaching_exp <= 5):
+        return "Empirical Skeptic"  # Low certainty, cautious approach with potential constraints
+
+    else:
+        return "Other"  # Researchers who don't fit neatly into any specific persona category
+
+# Applying the refined persona assignment function to each row in the DataFrame
+data['persona'] = data.apply(assign_persona, axis=1)
+
+# Displaying the count of each persona type to verify the refined distribution
+print(data['persona'].value_counts())
+
+
+persona_model_criteria = {
+    "Statistical Purist": {
+        "model_types": ["linear_regression", "logistic_regression",  "stock_model_ols", "flow_model_ols"],
+        "complexity_preference": "simple",
+        "data_handling": {
+            "handle_missing": "mean_imputation",
+            "transformations": ["log"],
+            "outlier_handling": "remove_outliers"  
+        }
+    },
+    "Social Scientist": {
+        "model_types": ["hierarchical_linear_model", "generalized_linear_model"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "multiple_imputation",
+            "transformations": ["none"],
+            "outlier_handling": "cap_outliers"
+        }
+    },
+    "Innovative Modeler": {
+        "model_types": ["bayesian_regression", "machine_learning", "complex_bayesian_model", "ml_model"],
+        "complexity_preference": "complex",
+        "data_handling": {
+            "handle_missing": "predictive_imputation",
+            "transformations": ["scaling", "PCA"],
+            "outlier_handling": "retain_outliers"
+        }
+    },
+    "Hypothesis-Driven Analyst": {
+        "model_types": ["confirmatory_factor_analysis", "logistic_regression", "logistic_model_flow", "logistic_model_stock"],
+        "complexity_preference": "moderate",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["standardization"],
+            "outlier_handling": "remove_outliers"
+        }
+    },
+    "Empirical Skeptic": {
+        "model_types": ["linear_regression", "basic_multilevel_model", "stock_model_simple"],
+        "complexity_preference": "low",
+        "data_handling": {
+            "handle_missing": "listwise_deletion",
+            "transformations": ["none"],
+            "outlier_handling": "cap_outliers"
+        }
+    }
+}
+import pandas as pd 
+
+# Load the dataset
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/processed_dataset2.csv'  
+dataset = pd.read_csv(file_path)
+
+
+'''
+# Check for missing values
+print(dataset.isnull().sum())
+
+# Fill missing numeric columns with mean values (or any preferred strategy)
+dataset.fillna(dataset.mean(), inplace=True)
+
+#print(dataset)
+
+# Define dependent and independent variables
+dvs_c = ["jobs_c", "unemp_c", "incdiff_c", "oldage_c", "housing_c", "health_c"]
+ivs = ["migstock_un", "netmigpct", "wdi_unempilo", "socx_oecd", "gdp_oecd"]
+
+# Verify columns
+print(dataset.columns)
+# Check existence of specific columns
+assert all(col in dataset.columns for col in dvs_c), "Missing dependent variable columns"
+assert all(col in dataset.columns for col in ivs), "Missing independent variable columns"
+
+'''
+
+# Defining a function that selects a model based on persona guidelines and input dataset characteristics
+def select_model_based_on_persona(persona, dataset):
+    """
+    Selects a model and data handling strategy based on the specified persona's preferences
+    Parameters:
+    - persona (str): The persona type for which to select the model
+    - dataset (DataFrame): The dataset to be analyzed (used for deciding based on data characteristics)
+    Returns:
+    - dict: Contains selected model, complexity preference, and data handling steps
+
+    """
+    # Retrieving the specific guidelines for the given persona
+    criteria = persona_model_criteria.get(persona, {})
+    
+    # Determining model type based on persona and basic dataset properties (e.g., sample size)
+    model_type = criteria.get("model_types", ["linear_regression"])[0]  
+    
+    # Applying complexity preference and data handling guidelines
+    complexity = criteria.get("complexity_preference", "simple")
+    data_handling = criteria.get("data_handling", {"handle_missing": "none", "transformations": ["none"]})
+    
+    # Returning the selected model setup
+    return {
+        "persona": persona,
+        "selected_model": model_type,
+        "complexity": complexity,
+        "data_handling": data_handling
+    }
+
+
+# 2 Step, Developing LLM Persona Agents
+
+class PersonaAgent:
+    def __init__(self, persona_type):
+        """
+        Initializes the PersonaAgent with a specific persona type and sets guidelines.
+        """
+        self.persona_type = persona_type
+        self.guidelines = persona_model_criteria.get(persona_type, {})
+    
+    def select_model(self, dataset):
+        """
+        Uses the persona's preferences to select a model, simulating an LLM-driven choice.
+        """
+        model_info = select_model_based_on_persona(self.persona_type, dataset)
+        print(f"[{self.persona_type}] Selected model: {model_info['selected_model']}")
+        # Simulate an LLM reasoning process for model selection
+        model_choice_reason = f"As a {self.persona_type}, I chose {model_info['selected_model']} because it aligns with my preference for {model_info['complexity']} complexity."
+        print(f"[{self.persona_type} Reasoning] {model_choice_reason}")
+        return model_info
+    
+    def preprocess_data(self, dataset):
+        """
+        Applies data handling based on persona-specific guidelines, including outlier handling and scaling.
+        """
+        # Ensure dataset is a DataFrame
+        if not isinstance(dataset, pd.DataFrame):
+            raise TypeError(f"Expected 'dataset' to be a DataFrame, but got {type(dataset).__name__} instead.")
+
+        data_handling = self.guidelines.get("data_handling", {})
+        
+        # Select numeric columns to handle only numeric data
+        numeric_cols = dataset.select_dtypes(include=['number']).columns
+
+        # Handle missing values only in numeric columns to avoid nuisance columns warning
+        if data_handling["handle_missing"] == "mean_imputation":
+            dataset[numeric_cols] = dataset[numeric_cols].fillna(dataset[numeric_cols].mean())
+        elif data_handling["handle_missing"] == "listwise_deletion":
+            dataset.dropna(inplace=True)
+        elif data_handling["handle_missing"] == "predictive_imputation":
+            # Placeholder: Apply predictive imputation or fill missing with a general approach
+            dataset[numeric_cols] = dataset[numeric_cols].fillna(dataset[numeric_cols].mean())  # Replace with actual predictive imputation if needed
+
+        # Ensure no NaN or Inf values remain for scaling
+        dataset.replace([np.inf, -np.inf], np.nan, inplace=True)
+        dataset.dropna(inplace=True)  # Alternatively, fill with mean or median if appropriate
+
+        # Transformations like scaling or PCA
+        if len(dataset) > 0:  # Check if dataset is non-empty
+            if "scaling" in data_handling["transformations"]:
+                scaler = StandardScaler()
+                try:
+                    dataset[numeric_cols] = scaler.fit_transform(dataset[numeric_cols])
+                except ValueError as e:
+                    print(f"[{self.persona_type}] Error during scaling: {e}")
+
+            # Optional: PCA transformation
+            if "PCA" in data_handling["transformations"]:
+                pca = PCA(n_components=min(len(numeric_cols), dataset.shape[0]))
+                try:
+                    dataset[numeric_cols] = pca.fit_transform(dataset[numeric_cols])
+                except ValueError as e:
+                    print(f"[{self.persona_type}] Error during PCA transformation: {e}")
+
+        print(f"[{self.persona_type}] Preprocessed data with: {data_handling}")
+        return dataset
+
+    def analyze_data(self, dataset):
+        """
+        Conducts analysis using the persona's model preferences.
+        """
+        print(f"\n[{self.persona_type}] Running analysis on dataset.")
+        
+        # Select a model configuration
+        model_info = self.select_model(dataset)
+        selected_model = model_info["selected_model"]
+        complexity = model_info["complexity"]
+        
+        # Preprocess data based on persona
+        preprocessed_data = self.preprocess_data(dataset)
+
+        # Fit the model (placeholder logic for now)
+        if selected_model == "stock_model_ols":
+            formula = f"{dvs_c[0]} ~ {ivs[0]} + C(year) + C(iso_country)"
+            # Placeholder for OLS model fitting
+            result = {
+                "model": selected_model,
+                "complexity": complexity,
+                "AIC": random.uniform(100, 200), 
+                "BIC": random.uniform(100, 200),
+                "parameter_estimates": {"beta": random.uniform(-1, 1)}  # Simulated parameter
+            }
+        elif selected_model == "flow_model_ols":
+            formula = f"{dvs_c[0]} ~ {ivs[1]} + C(year) + C(iso_country)"
+            # Placeholder for OLS model fitting
+            result = {
+                "model": selected_model,
+                "complexity": complexity,
+                "AIC": random.uniform(100, 200), 
+                "BIC": random.uniform(100, 200),
+                "parameter_estimates": {"beta": random.uniform(-1, 1)}  # Simulated parameter
+            }
+        else:
+            # Ensure 'parameter_estimates' key is always present
+            result = {
+                "model": selected_model,
+                "complexity": complexity,
+                "fit_success": False,
+                "AIC": None,
+                "BIC": None,
+                "parameter_estimates": {}  # Default empty dictionary
+            }
+
+
+        print(f"[{self.persona_type}] Model fit complete: {result}")
+        return result
+
+    def interpret_results(self, results):
+        """
+        Provides persona-specific interpretation of results.
+        """
+        interpretation = ""
+        if self.persona_type == "Statistical Purist":
+            interpretation = f"The results are reliable with {results['complexity']} complexity."
+        elif self.persona_type == "Social Scientist":
+            interpretation = f"Results should consider social factors, as the model shows moderate alignment."
+        elif self.persona_type == "Innovative Modeler":
+            interpretation = f"The complexity enhances insights, but caution is needed for generalization."
+        elif self.persona_type == "Hypothesis-Driven Analyst":
+            interpretation = f"Findings strongly support the hypothesis-driven framework."
+        elif self.persona_type == "Empirical Skeptic":
+            interpretation = f"Results should be interpreted conservatively due to low complexity preference."
+
+        print(f"[{self.persona_type} Interpretation] {interpretation}")
+        return interpretation
+
+
+# Create persona agents
+persona_types = ["Statistical Purist", "Social Scientist", "Innovative Modeler", 
+                 "Hypothesis-Driven Analyst", "Empirical Skeptic"]
+agents = [PersonaAgent(persona) for persona in persona_types]
+results = {}
+
+
+
+
+# Analysis and interpretation for each persona
+for agent in agents:
+    print(f"\nRunning analysis for persona: {agent.persona_type}")
+    analysis_results = agent.analyze_data(dataset)
+    interpretation = agent.interpret_results(analysis_results)
+    results[agent.persona_type] = {"analysis": analysis_results, "interpretation": interpretation}
+
+print("\nAll persona agent results and interpretations:", results)
+
+# Loading the datasets
+# Dictionary with file paths and dataset names
+import pandas as pd 
+file_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/processed_dataset2.csv' 
+dataset = pd.read_csv(file_path)
+dataset = pd.DataFrame(dataset)
+
+  
+all_results = []
+
+# Run analysis for each persona on each dataset
+for agent in agents:
+    print(f"\nRunning analysis for persona: {agent.persona_type} on the dataset")
+    
+    # Model selection, data processing, and analysis by each persona on the entire dataset
+    analysis_results = agent.analyze_data(dataset)
+    
+    # Interpretation aligned with persona's style
+    interpretation = agent.interpret_results(analysis_results)
+    
+    # Storing results for comparison
+    # Storing results for comparison
+    all_results.append({
+        "persona": agent.persona_type,
+        "dataset": "processed_dataset",
+        "model_used": analysis_results.get("model", "missing"),  # Default to missing if missing
+        "parameters": analysis_results.get("parameter_estimates", {}),
+        "complexity": analysis_results.get("complexity", "unknown"),
+        "interpretation": interpretation
+    })
+
+# Converting to DataFrame 
+
+results_df = pd.DataFrame(all_results)
+print("\nPersona Agent Analysis Results Across Multiple Datasets:")
+print(results_df)
+
+
+# Compare persona results to Breznau's outcomes
+from scipy.stats import f_oneway
+
+# ANOVA comparison
+# Extract numeric parameter estimates from the "parameters" column
+results_df["beta"] = results_df["parameters"].apply(lambda x: x.get("beta", np.nan))
+
+# Group the extracted numeric values by persona
+grouped_estimates = results_df.groupby("persona")["beta"].apply(list)
+
+# Filter out groups with fewer than 2 observations
+filtered_groups = [group for group in grouped_estimates if len(group) > 1]
+
+if len(filtered_groups) > 1:
+    # Perform ANOVA on the filtered numeric groups
+    f_stat, p_value = f_oneway(*filtered_groups)
+    print(f"ANOVA results: F-statistic={f_stat}, p-value={p_value}")
+else:
+    print("Not enough data for ANOVA: At least two groups with more than one observation are required.")
+
+# Save results for review
+results_df.to_csv("/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/persona_agent_results.csv", index=False)
+print("Results saved successfully.")
+
+
+# That is the problem I get: Not enough data for ANOVA: At least two groups with more than one observation are required.
+# Let's fix it 
+# Ensuring each persona has enough observations
+print(results_df["persona"].value_counts())

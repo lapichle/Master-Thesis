@@ -1,0 +1,66 @@
+import pandas as pd
+import statsmodels.formula.api as smf
+
+# Load Team 18 and macro-indicator data (adjust paths as needed)
+team18_data_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/team18_multi.csv'
+cri_macro_path = '/Users/laurapichler/Desktop/Repository/Master-Thesis/Breznau/cri_macro.csv'
+
+# Read data
+team18_data = pd.read_csv(team18_data_path)
+cri_macro = pd.read_csv(cri_macro_path)
+
+# Merge macro indicators into team data on country and year
+team18_data = team18_data.merge(cri_macro, on=["iso_country", "year"], how="left")
+
+# Ensure numeric types for macro indicators
+macro_cols = ['wdi_unempilo', 'socx_oecd', 'gdp_oecd', 'ginid_solt', 'migstock_un', 'netmigpct']
+team18_data[macro_cols] = team18_data[macro_cols].apply(pd.to_numeric, errors='coerce')
+
+# Dependent variables and predictors
+dvs_c = ["jobs_c", "unemp_c", "incdiff_c", "oldage_c", "housing_c", "health_c"]
+vars_stock = [
+    "", "wdi_unempilo + ", "socx_oecd + ", "gdp_oecd + ", "netmigpct + ",
+    "wdi_unempilo + socx_oecd + ", "wdi_unempilo + gdp_oecd + ",
+    "socx_oecd + gdp_oecd + ", "netmigpct + wdi_unempilo + ",
+    "netmigpct + socx_oecd + ", "netmigpct + gdp_oecd + "
+]
+vars_flow = [
+    "", "wdi_unempilo + ", "socx_oecd + ", "gdp_oecd + ", "migstock_un + ",
+    "wdi_unempilo + socx_oecd + ", "wdi_unempilo + gdp_oecd + ",
+    "socx_oecd + gdp_oecd + ", "migstock_un + wdi_unempilo + ",
+    "migstock_un + socx_oecd + ", "migstock_un + gdp_oecd + "
+]
+
+# Prepare a results DataFrame
+results = []
+
+# Function to run models and store results
+def run_models(dependent_vars, predictors, data, effect_type):
+    for dv in dependent_vars:
+        for spec in predictors:
+            formula = f"{dv} ~ migstock_un + {spec}C(year) + C(iso_country)"
+            try:
+                model = smf.ols(formula=formula, data=data).fit()
+                results.append({
+                    "dependent_variable": dv,
+                    "specification": spec.strip(),
+                    "effect_type": effect_type,
+                    "beta": model.params.get("migstock_un", None),
+                    "p_value": model.pvalues.get("migstock_un", None),
+                    "AIC": model.aic,
+                    "BIC": model.bic
+                })
+            except Exception as e:
+                print(f"Error with {dv}, {spec}: {e}")
+
+# Run stock and flow models
+run_models(dvs_c, vars_stock, team18_data, effect_type="Stock")
+run_models(dvs_c, vars_flow, team18_data, effect_type="Flow")
+
+# Convert results to a DataFrame
+results_df = pd.DataFrame(results)
+
+# Save results for further analysis
+results_df.to_csv('/Users/laurapichler/Desktop/Repository/Master-Thesis/Results/results_beta_extraction.csv', index=False)
+
+print("Beta extraction completed and saved to /Users/laurapichler/Desktop/Repository/Master-Thesis/Results/results_beta_extraction.csv")
