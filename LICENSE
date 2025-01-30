@@ -1,0 +1,13 @@
+##License
+
+⚠️ License & Citation
+
+All original code and materials in this repository are open-source under the MIT License.
+If you use this research, please cite appropriately:
+
+@thesis{pichler2025persona,
+  author  = {Laura Pichler},
+  title   = {Battling Idiosyncratic Uncertainty: The Conflict between Artificial Intelligence and Unpredictable Factors},
+  school  = {University of Mannheim},
+  year    = {2025}
+}
